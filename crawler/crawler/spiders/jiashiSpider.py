@@ -66,3 +66,5 @@ class JiashiSpider(scrapy.Spider):
         yield scrapy.Request(nextPageUrl, callback=parse)
 
     def parse_topic(self, response):
+        pass
+        
