@@ -1,0 +1,2229 @@
+<html xmlns="http://www.w3.org/1999/xhtml" class=" js opacity generatedcontent pointerevents"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>华为家事</title>
+<meta http-equiv="X-UA-Compatible" content="IE=9">
+<iframe src="javascript:false" style="display: none;"></iframe><script src="http://app.huawei.com/hwa-c/configresource/js/general/ha.js" async="" id="ha"></script><script type="text/javascript">
+document.oncontextmenu = disableFunction;
+	document.onselectstart = disableFunction;
+	document.onkeydown = disableKey;
+	
+	function disableFunction() {
+		return false;
+	}
+	
+	function disableKey(e) {
+		var event = e=window.event||e;
+		if (event.ctrlKey && event.keyCode==67) {
+				return false;
+		}
+	}</script>
+<meta name="description" content="心声社区">
+<meta name="keywords" content="心声社区">
+<script>
+/* 全局JS常量 */
+var THEME = "http://xinsheng.huawei.com/cn/public/themes/default";
+var APP    = "/cn/?app=forum";
+var URL    = "/cn/?app=forum&mod=List";
+var JS_DIR     = "http://xinsheng.huawei.com/cn/public/js";
+var PUBLIC = "http://xinsheng.huawei.com/cn/public";
+var SITE_URL = "http://xinsheng.huawei.com/cn";
+var UPLOAD_URL = "http://xinsheng-image.huawei.com/cn/forumimage";
+var EDITER_BASE = JS_DIR+"/kissy/";
+var EDITER_UPLOAD = "http://xinsheng.huawei.com/cn/index.php?app=home&mod=Attach&act=index";
+var LANGUAGE_NAME = "zh-cn";
+var _ROOT_ = "/cn";
+var STYLE_COLOR = "";
+var UPADTE_V = "20160602";
+var editorUploadParams = "type=forum_461";
+</script>
+ 	<link href="http://xinsheng.huawei.com/cn/public/css/style.css?v=20160602" rel="stylesheet" type="text/css" id="themepoint">
+
+<link href="http://xinsheng.huawei.com/cn/public/css/jquery.mCustomScrollbar.css?v=20160602" rel="stylesheet"> 
+<script type="text/javascript" src="http://xinsheng.huawei.com/cn/public/js/core.js?v=20160602"></script>
+<script type="text/javascript" src="http://xinsheng.huawei.com/cn/public/js/jquery.slides.min.js?v=20160602"></script>
+<script type="text/javascript" src="http://xinsheng.huawei.com/cn/public/js/jquery.hoveraccordion.min.js?v=20160602"></script>
+<script type="text/javascript" src="http://xinsheng.huawei.com/cn/public/js/jquery.easydropdown.min.js?v=20160602"></script>
+<script type="text/javascript" src="http://xinsheng.huawei.com/cn/public/js/modernizr.custom.79639.js?v=20160602"></script>
+<script type="text/javascript" src="http://xinsheng.huawei.com/cn/public/js/jquery.hoverIntent.minified.js?v=20160602"></script>
+<script type="text/javascript" src="http://xinsheng.huawei.com/cn/public/js/user_at.js?v=20160602"></script>
+<script>
+var questionStatus = '';
+$(document).ready(function(){
+	if(questionStatus == '1'){
+		$.post(SITE_URL+'/index.php?app=cp&mod=question&act=showEnter',function(res){
+	    	$('body').append(res);
+	    	$('.open_pop').click();
+	    });
+	}
+    $("textarea[rel='comment_rel']").live('keyup',function(event){
+		if(event.keyCode==32 || event.keyCode==8 || event.keyCode==13){
+			core.addons.comment.checkCommentLength(this,250);
+		}
+		if(event.ctrlKey&&event.keyCode==13){
+			var id = $(this).attr('commentId') ;
+			if( $(this).attr('ctype')=='reply' ){
+				core.addons.comment.addReply( id );
+			}else{
+				core.addons.comment.addComment( id );
+			}
+			
+		}
+    });
+    $("textarea[rel='comment_rel']").live('keypress',function(){
+    	core.addons.comment.checkCommentLength(this,250);
+    });
+    $("textarea[rel='comment_rel']").live('blur',function(){
+    	core.addons.comment.checkCommentLength(this,250);
+    });
+    $("textarea[rel='comment_rel']").live('keydown',function(){
+    	core.addons.comment.checkCommentLength(this,250);
+    });
+    $("textarea[rel='comment_rel']").live('keyup',function(){
+    	core.addons.comment.checkCommentLength(this,250);
+    })
+});
+</script>
+<link rel="shortcut icon" href="http://xinsheng.huawei.com/cn/public/themes/default/favicon.ico"></head>
+<!-- 
+-->
+<!--png图片背景透明的JS-->
+<!--[if lte IE 6]><script type="text/javascript" src="http://xinsheng.huawei.com/cn/public/js/imgPng.js?v=20160602"></script><![endif]-->
+<!--[if lte IE 8]>
+   <link href="http://xinsheng.huawei.com/cn/public/css/checkboxie8.css?v=20160602" rel="stylesheet" />
+<![endif]-->
+
+
+<body style="width: 100%;">
+     <!--  首页头部 Star -->
+    <div id="plate_top"></div>
+    <div class="iframeBox">
+        <div class="plate_menu_box">
+            <div class="plate_menu">
+			                 <a href="http://xinsheng.huawei.com/cn"><img src="http://xinsheng.huawei.com/cn/public/img/logo.png" class="min-logo"></a>
+								<ul class="min-nav">
+					                    							<li><a href="http://xinsheng.huawei.com/cn">首页</a></li>
+													<li class="on"><a href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=List&amp;act=index&amp;class=461">华为家事</a></li>
+													<li><a href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=List&amp;act=index&amp;class=462">七彩生活</a></li>
+													<li><a href="http://app.huawei.com/video">视频</a></li>
+													<li class="min-more-nav">
+                                <a href="http://app.huawei.com/paper/newspaper/newsPaperPage.do?method=showLatestNewsInfoList&amp;sortId=1">华为人</a>
+                                <div class="min-more-nav-bd">
+                                                                        <div class="min-more-nav-txt">
+										                                        											                                            <a href="http://app.huawei.com/paper/newspaper/newsBookType.do?method=queryBookTypeList" class="last">
+																									<span class="arrow-up"><span></span></span><em>文化资料</em>
+																							</a>
+											                                    </div>
+                                </div>
+                            </li>
+																					<li><a target="_blank" href="http://app.huawei.com/paper/newspaper/newsPaperPage.do?method=showLatestMagazineList&amp;sortId=4">HuaweiPeople</a></li>								<li><a href="http://xinsheng.huawei.com/cn/index.php?app=group&amp;mod=Index&amp;act=pickTopics">圈子</a></li>								<li><a href="http://xinsheng.huawei.com/cn/index.php?app=space&amp;mod=Blog&amp;act=page">博客</a></li>								<li><a href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=List&amp;act=index&amp;class=915">内部招聘</a></li>								<li><a href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=List&amp;act=index&amp;class=889">版务区</a></li>										</ul>
+                                <div class="plate_user"><a href="https://uniportal.huawei.com/uniportal/?redirect=http%3A%2F%2Fxinsheng.huawei.com%2Fcn%2Findex.php%3Fapp%3Dforum%26mod%3DList%26act%3Dindex%26class%3D461" class="login">登录</a></div>     
+                                <div class="plate_search">
+                    <a href="javascript:void(0)" onclick="doSearch();" class="plate_search_btn">&nbsp;</a>
+                    <div id="plate_search" class="plate_search_sel" tabindex="1">
+                                                    <span id="default_search_title" urn="forum">论坛</span>    
+                        <ul class="dropdown">
+                            <li urn="forum"><a href="javascript:void(0)">论坛</a></li>
+                            <li urn="space"><a href="javascript:void(0)">空间</a></li>
+                            <li urn="group"><a href="javascript:void(0)">圈子</a></li>
+                            <li urn="blog"><a href="javascript:void(0)">博客</a></li>
+                            <li urn="paper"><a href="javascript:void(0)">报纸</a></li>
+                            <li urn="video"><a href="javascript:void(0)">视频</a></li>
+                        </ul>
+                    </div>
+                    <input type="text" value="" id="search_input">
+                </div>
+                </div>
+            </div>
+            <div class="plate_kidmenu_bg"></div>
+            <iframe class="plate_iframe" scrolling="no" frameborder="0"></iframe>
+        </div>
+    
+            <div class="topAdvBox" id="topAdvBox1" style="width:1000px; height:90px;">
+	    	<a href="JavaScript:void(0)" class="icon_close" onclick="closeLable('topAdvBox1','adv', 'yes')"></a>
+        <div class="topAdv" id="ads1" style="width: 1000px; height: 90px; overflow: hidden;">
+    	<div class="slidesjs-container" style="overflow: hidden; position: relative; width: 1000px; height: 90px;"><div class="slidesjs-control" style="position: relative; left: 0px; width: 1000px; height: 90px;"><div class="slidesjs-slide" slidesjs-index="0" style="position: absolute; top: 0px; left: 0px; width: 100%; z-index: 10; backface-visibility: hidden; display: none;"><a class="adv_link" href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=Detail&amp;act=index&amp;id=2865465" target="_blank" value="495"><img src="http://xinsheng-image.huawei.com/cn/forumimage/showimage-3577485-417ccdc4ad6ad84cf301dbfa2c4984c3-arr.jpg" width="1000" height="90"></a></div><div class="slidesjs-slide" slidesjs-index="1" style="position: absolute; top: 0px; left: 0px; width: 100%; z-index: 0; backface-visibility: hidden;"><a class="adv_link" href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=Detail&amp;act=index&amp;id=2934207" target="_blank" value="549"><img src="http://xinsheng-image.huawei.com/cn/forumimage/showimage-3664193-417ccdc4ad6ad84cf301dbfa2c4984c3-arr.jpg" width="1000" height="90"></a></div><div class="slidesjs-slide" slidesjs-index="2" style="position: absolute; top: 0px; left: 0px; width: 100%; z-index: 0; display: none; backface-visibility: hidden;"><a class="adv_link" href="http://www.vmall.com/product/2322.html" target="_blank" value="551"><img src="http://xinsheng-image.huawei.com/cn/forumimage/showimage-3669505-417ccdc4ad6ad84cf301dbfa2c4984c3-arr.jpg" width="1000" height="90"></a></div><div class="slidesjs-slide" slidesjs-index="3" style="position: absolute; top: 0px; left: 0px; width: 100%; z-index: 0; display: none; backface-visibility: hidden;"><a class="adv_link" href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=Detail&amp;act=index&amp;id=2943457" target="_blank" value="553"><img src="http://xinsheng-image.huawei.com/cn/forumimage/showimage-3678431-417ccdc4ad6ad84cf301dbfa2c4984c3-arr.jpg" width="1000" height="90"></a></div></div></div>    <a class="slidesjs-previous slidesjs-navigation" href="#" title="Previous">Previous</a><a class="slidesjs-next slidesjs-navigation" href="#" title="Next">Next</a><ul class="slidesjs-pagination"><li class="slidesjs-pagination-item"><a href="#" data-slidesjs-item="0" class=""></a></li><li class="slidesjs-pagination-item"><a href="#" data-slidesjs-item="1" class="active"></a></li><li class="slidesjs-pagination-item"><a href="#" data-slidesjs-item="2"></a></li><li class="slidesjs-pagination-item"><a href="#" data-slidesjs-item="3"></a></li></ul></div>
+</div>
+<script>
+	$(function(){
+				$('#ads1').slidesjs({
+			width:1000,
+			height:90,
+			play:{auto: true,effect: "fade",interval:10000}
+		});
+				var advCount1 = {
+				init:function(app, uid, uname, maskName, maskId, fid) 
+				{
+					this.app = typeof(app) == 'undefined' ? '' : app;
+					this.uid = typeof(uid) == 'undefined' ? '' : uid;
+					this.uname = typeof(uname) == 'undefined' ? '' : uname;
+					this.maskName = typeof(maskName) == 'undefined' ? '' : maskName;
+					this.maskId = typeof(maskId) == 'undefined' ? '' : maskId;
+					this.fid = typeof(fid) == 'undefined' ? '' : fid;
+					this.refer = "";
+				},
+				initAdvInfo:function(advLink, advImgLink) 
+				{
+					this.ext1 = 'adv';
+					this.ext2 = typeof(advLink) == 'undefined' ? '' : advLink;
+					this.ext3 = typeof(advImgLink) == 'undefined' ? '' : advImgLink;
+				},
+				initUrl:function() 
+				{
+					this.advCountUrl = SITE_URL + '/online_check_new.php?' + 
+						'action=trace' + 
+						'&source=web' + 
+						'&app=' + this.app + 
+						'&uid=' + this.uid +
+						'&uname=' + this.uname + 
+						'&maskName=' + this.maskName + 
+						'&maskId=' + this.maskId + 
+						'&ext1=' + this.ext1 + 
+						'&ext2=' + this.ext2 + 
+						'&ext3=' + this.ext3 + 
+						'&refer=' + this.refer + 
+						'&fid=' + this.fid;
+				},
+				doCount:function() 
+				{
+					this.initUrl();
+					$('#ads1').append("\<script type=\"text\/javascript\" src=\"" + this.advCountUrl + "\"\>\<\/script\>");
+				}
+			};
+			if (typeof(advCount1) != 'undefined') {
+				advCount1.init("forum/list/index", "", "", "", "", "461");	
+			}
+			$("#ads1 a.adv_link").click(function(){
+				var advLink = $(this).attr('value');//encodeURIComponent($(this).attr('href'));
+				var advImgLink = encodeURIComponent($('img', this).attr('src'));
+				advCount1.initAdvInfo(advLink, advImgLink);
+				advCount1.doCount();
+			});
+		
+});
+</script>
+<div class="info-a-Box">
+	<div class="info-a-alert">如果查看其他昵称消息，系统将自动切换其他昵称为当前使用昵称。</div>
+	<ul class="info-a-Box-ul">
+		<li class="info-a-Box-ul-li-top">
+			<span class="info-a-Box-ul-li-top-nc">昵称</span> 
+			<span class="info-a-Box-ul-li-top-xx" style="">消息</span>
+		</li>
+		
+			    
+	    		
+			</ul>
+	<p style="text-align:center;"><input onclick="$.tbox.close();" type="button" value="关闭" class="info-a-alert-btn"></p>
+</div>
+<script>
+    function doSearch(){
+		var key	=	$('#search_input').val();
+		var type	=	$('#default_search_title').attr('urn');
+		var url		=	'';
+		if( type=='paper' ){
+			url	=	"http://app.huawei.com/paper/newspaper/searchPapers.do?method=searchResult&searchContent=" + encodeURIComponent(key) + "&paperType=1,2,3,4,8,&all=true";
+		} else if ( type=='video' ){
+			url	=	"http://app.huawei.com/video/video/videoColligation.do?method=moreVideo&watchNumFlag=1&title=" + encodeURIComponent(key);
+		} else if ( type=='forum' || type=='blog' || type=='group' || type=='space' ){
+			url	=	U('search/'+type+'/index')+"&key="+encodeURIComponent(key);
+		}
+		if(url==''){
+			return;
+		}else{
+			window.open(url);
+		}
+	}
+    $("a[rel='face']").userCard();
+	
+	//监听回车事件,按回车就执行搜索
+	$('#search_input').focus(function(){
+		$(this).keyup( function(event){
+			if(event.keyCode == 13){
+                doSearch();
+				event.keyCode = 0;
+			}
+		});
+
+	});
+	
+	function tabs(obj,con){
+		$(obj+' li').live("click",function(e){
+			e.preventDefault(); 
+			var _index = $(this).index();
+			$(this).addClass("active").siblings().removeClass("active"); 
+			$(this).closest(obj).nextAll(con).eq(_index).show().siblings(con).hide(); 
+		}); 
+	}  
+	
+	function selectmaskname(maskId,type){
+		$.post("http://xinsheng.huawei.com/cn/index.php?app=space&mod=Info&act="+type+"",{maskid:maskId},function(txt){
+			window.location.reload();
+		});
+	}
+	
+$(function(){
+	function hoverTall(){
+		$(this).children("ul").show();		
+	}
+	function leaveTall(){
+		$(this).children("ul").hide();		
+	}
+	
+	$(".info-a").live('click',function (){
+        var _html = $(".info-a-Box").html();
+        $(_html).show();
+        $.tbox.popBox(_html,'其他昵称消息',false);
+    });
+	tabs(".tabs",".tabsBox");
+});
+
+$(document).ready(function(){
+	$('a[rel="theme"]').live('click',function(){
+		type = $(this).attr('themestyle');
+		var _this = this;
+		$.post("http://xinsheng.huawei.com/cn/index.php?app=space&mod=Info&act=saveTheme",{type:type},function(txt){
+			if(txt){
+				if( type =='normal' ){
+					//$('#themepoint').attr('href',"http://xinsheng.huawei.com/cn/public/css/style.css?v=20110924");
+					//$("#normal").addClass('on');
+					//$("#blue").removeClass('on');
+				}else{
+					//$('#themepoint').attr('href',"http://xinsheng.huawei.com/cn/public/css/style_"+type+".css?v=20110924");
+					//$("#blue").addClass('on');
+					//$("#normal").removeClass('on');
+				}
+			}
+			window.location.reload();
+		});
+	})	
+	$('.header_message ul li ').mouseover(function (){
+		$(".header_message > ul > li > ul").hide();
+		var p = $(this).position();
+		$(this).find('ul').css('top',p.top);
+		$(this).find('ul').css('z-index','10005');
+		$(this).find('ul').css('display','inline-block');
+	})
+	$('.header_message ul li ').mouseout(function (){
+		$(".header_message > ul > li > ul").hide();
+	})
+});
+    <!-- xwx247749新增禁言标识js-->
+    $(function(){
+        b = document.cookie.indexOf('jy=');
+        if(b == -1){
+            $('.header_Gag').children("ul").show();
+        }else{
+            $(".header_Gag").hoverIntent(hoverTall,leaveTall);
+            $('.header_Gag').children("ul").hide();
+        }
+        $('.header_Gag').delegate('.header_Gag_close','click',function(){
+            $(this).parent('ul').hide();
+            $(".header_Gag").hoverIntent(hoverTall,leaveTall);
+            function hoverTall(){
+                $(this).children("ul").show();
+            }
+            function leaveTall(){
+                $(this).children("ul").hide();
+            }
+        })
+
+        $(".header_icon_Wechat").hoverIntent(hoverTall,leaveTall);
+        $(".header_icon_Weibo").hoverIntent(hoverTall,leaveTall);
+        function hoverTall(){
+            $(this).children("ul").show();
+        }
+        function leaveTall(){
+            $(this).children("ul").hide();
+        }
+    })
+</script><div id="card_handle" style="display: none; position: absolute; z-index: 1024;"><div class="xin_cards"><div class="xin_cards_L" id="xin_cards_L"></div><div class="xin_cards_wrap new_year_cards"><div class="cards_abstract" id="card_content"> </div></div><div class="xin_cards_R" id="xin_cards_R"></div></div></div>
+<script>
+$(function(){
+	//下拉  @lwx334551
+	mst = null;
+	mstout = null;
+    dropdownOn = null;
+    dropdownOff = null;
+    $(".ui-dropdown").hover(
+        function () {
+            _dropdownObj = $(this);
+            dropdownOn = setTimeout(function() {
+                if (typeof(dropdownOff) !='undefined' || dropdownOff !='null'){
+                    clearTimeout(dropdownOff);
+                }
+                $(".ui-dropdown-bd").hide();
+                $(".ui-dropdown").removeClass("ui-dropdown-on");
+                _dropdownObj.addClass("ui-dropdown-on").find(".ui-dropdown-bd").show();
+            },150);
+        },
+        function () {
+            clearTimeout(dropdownOn);
+            _dropdownObj = $(this);
+            dropdownOff = setTimeout(function() {
+                $(".ui-dropdown-bd").hide();
+                $(".ui-dropdown").removeClass("ui-dropdown-on");
+                //_dropdownObj.removeClass("ui-dropdown-on").find(".ui-dropdown-bd").hide();
+                _dropdownObj.find(".ui-s-menu-bd").hide();
+            },200);
+        }
+    );
+
+	$(".ui-s-menu").hover(
+		function () {
+			if (typeof(mstout) !='undefined' || mstout !='null'){
+				clearTimeout(mstout);
+			}
+			_tar = $(this).find(".ui-s-menu-bd");
+			mst = setTimeout(function(){ 
+				$(".ui-s-menu-bd").hide(); 
+				_tar.show();
+			},150);
+		},
+		function () {
+			clearTimeout(mst);
+			_this = $(this);
+			mstout = setTimeout(function(){ 
+				_this.find(".ui-s-menu-bd").hide();
+			},200);
+		}
+	);
+	
+	$(".ui-s-menu-bd").hover(
+		function () {
+			$(this).show();
+		},
+		function () {			
+			$(this).hide();
+		}
+	);
+
+	//NAV更多  @lwx334551
+	moreMenuOut = moreMenuIn = null;
+	$(".min-more-nav").hover(
+		function () {
+            _moreMenuObj = $(this);
+			moreMenuIn = setTimeout(function(){
+                if (typeof(moreMenuOut) !='undefined' || mstout !='null'){
+                    clearTimeout(moreMenuOut);
+                }
+                $(".min-more-nav").removeClass("min-more-nav-act");
+                $(".min-more-nav-bd").hide();
+                _moreMenuObj.addClass("min-more-nav-act").find(".min-more-nav-bd").show();
+			},150);
+		},
+		function () {
+            clearTimeout(moreMenuIn);
+            _moreMenuObj = $(this);
+			moreMenuOut = setTimeout(function(){
+                $(".min-more-nav").removeClass("min-more-nav-act");
+                $(".min-more-nav-bd").hide();
+                //_moreMenuObj.removeClass("min-more-nav-act").find(".min-more-nav-bd").hide();
+			},200);			
+		}
+	);
+
+	//行政之窗--更多
+	moreMenuOutXz = moreMenuInXz = null;
+	$(".nav-dorpdown").hover(
+		function () {
+			if (typeof(moreMenuOut) !='undefined' || mstout !='null'){
+				clearTimeout(moreMenuOutXz);
+			}
+			moreMenuInXz = setTimeout(function(){
+				$(".nav-dorpdown").addClass("nav-dorpdown-act"); 
+				$(".more-menu-bd").show();
+			},150);
+		},
+		function () {
+			clearTimeout(moreMenuInXz);
+			moreMenuOutXz = setTimeout(function(){ 
+				$(".nav-dorpdown").removeClass("nav-dorpdown-act");
+				$(".more-menu-bd").hide();
+			},200);
+		}
+	);
+
+	//@20160524 增加:点击下拉菜单跳转到新页后隐藏当前点击的下拉菜单 lwx334551
+    $(".ui-dropdown-menu>li").bind("click",function(){
+        $(".ui-dropdown-bd").hide();
+    });
+    $(".min-more-nav-txt>a").bind("click",function(){
+        $(".min-more-nav-bd").hide();
+    });
+	
+})
+</script>				
+
+<script type="text/javascript" src="http://xinsheng.huawei.com/cn/public/js/portamento.js"></script>
+<style>
+body{ background:#fff;}
+</style>
+<div class="html_body">
+
+        <!--  BBS左  Star -->
+        <div class="bbs_left">
+        
+            <!--论坛标题-->
+            <div class="bbs_title">
+                <!--分页 begin -->
+                <div class="bbs_page fr">
+	                	<form method="get" action="" onsubmit="return turnToPage(this)"><ul> <li class="on"><a>1</a></li><li><a href="/cn/index.php?app=forum&amp;mod=List&amp;act=index&amp;class=461&amp;p=2">2</a></li><li><a href="/cn/index.php?app=forum&amp;mod=List&amp;act=index&amp;class=461&amp;p=3">3</a></li><li><a href="/cn/index.php?app=forum&amp;mod=List&amp;act=index&amp;class=461&amp;p=4">4</a></li><li><a href="/cn/index.php?app=forum&amp;mod=List&amp;act=index&amp;class=461&amp;p=3563">...3563</a></li><li><input type="text" value="1" id="changeToPage" class="changeToPage" data-url="">/3563 &nbsp;</li><li><a href="/cn/index.php?app=forum&amp;mod=List&amp;act=index&amp;class=461&amp;p=2">下一页&gt;</a></li>
+				<script>
+					function turnToPage(obj){
+						obj = $(obj);
+						var input = $(obj).find("input");
+						var i = input.val();
+						if(!i.match(/^\d+$/)) {
+							alert("请输入数字");
+							obj.focus();
+							return false;
+						}
+						
+						var url  = input.attr("data-url");
+						if($.trim(url) =="") url = window.location.href;
+						//todo url中带有#号时会对分页跳转造成影响，导致无法跳转
+						//not a param pattern
+						var nap = /#[\w]*/g;
+						//过滤掉url中的 #号
+						if( nap.test(url) ){
+							url = url.replace( nap,"");
+	    				}
+						var re = /\&p=[0-9]*/g;      
+						if( re.test(url) ){
+							url = url.replace( re,"&p="+i+"");
+						}else{
+							url += ("&p="+i+"");
+						}
+						
+						window.location.href = url;
+						return false;
+					}
+								
+				</script>
+			</ul></form>	                </div>                <!--分页 end -->
+                <span class="bbs_title_font">华为家事</span>
+                <span class="bbs_title_new">今日新贴 (<span>23</span>)</span>
+                            </div>
+            <!--论坛列表-->
+            <div class="bbs_list_box">
+                <div class="bbs_list_box_title">
+                    <ul>
+                    	<li class="on"><a href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=List&amp;act=index&amp;class=461">全部主题</a></li>
+                    							
+                    	<li><a href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=List&amp;act=index&amp;class=461&amp;cate=157">管理思考</a></li><li><a href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=List&amp;act=index&amp;class=461&amp;cate=159">政策交流</a></li><li><a href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=List&amp;act=index&amp;class=461&amp;cate=155">公司文件</a></li><li><a href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=List&amp;act=index&amp;class=461&amp;cate=161">职场天地</a></li><li><a href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=List&amp;act=index&amp;class=461&amp;cate=163">业界动态</a></li><li><a href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=List&amp;act=index&amp;class=461&amp;cate=239">求助咨询</a></li><li><a href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=List&amp;act=index&amp;class=461&amp;cate=167">其它</a></li>                    </ul>
+                
+                </div>
+                                <!-- 列表 tab begin -->
+                <div class="bbs_list_box_title_info">
+				<ul>
+					<li><a href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=List&amp;act=index&amp;class=461&amp;special=sign&amp;sign=5">精华</a></li>
+					<li><a href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=List&amp;act=index&amp;class=461&amp;special=sign&amp;sign=28">公告</a></li>
+					<li><a href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=List&amp;act=index&amp;class=461&amp;special=sign&amp;sign=26">投票</a></li>
+					<li><a href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=List&amp;act=index&amp;class=461&amp;special=sign&amp;sign=89">问答</a></li>
+					<li><a href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=List&amp;act=index&amp;class=461&amp;type=topic&amp;special=my">我的帖子</a></li>
+					<li><a href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=List&amp;act=index&amp;class=461&amp;type=reply&amp;special=my">我的回复</a></li>
+					<li class="last"><a href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=List&amp;act=index&amp;class=461&amp;type=vote&amp;special=my">我的投票</a></li>
+				</ul>               
+                </div>
+                
+                
+                
+                				        <style>
+    .font_box .title > p a em.green{color:green;font-style: normal;}
+    .font_box .title > p a:hover em.green{color:#F36E01;}
+    .font_box .title > p a em.red{color:red;font-style: normal;}
+    .font_box .title > p a:hover em.red{color:#F36E01;}
+</style>
+<div class="bbs_list">
+                                    <div class="bbs_list_title">
+                        <div class="bbs_order_box fr"><span class="fl">排序：</span>
+			                <div class="form_select" style="width: 48px;"><span class="old"><select tabindex="4" class="" id="list_order">
+			                   <!--  <option value="" class="label">选择</option> -->
+			                    <option value="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=List&amp;act=index&amp;class=461&amp;order=cTime">发贴时间</option>
+			                    <option value="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=List&amp;act=index&amp;class=461&amp;order=rTime" selected="">回复时间</option>
+			                    <option value="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=List&amp;act=index&amp;class=461&amp;order=replycount">按回复量</option>
+			                    <option value="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=List&amp;act=index&amp;class=461&amp;order=viewcount">按点击量</option>
+							</select></span><span class="selected">回复时间</span><span class="carat"></span><div><ul style="width: 108px;"><li>发贴时间</li><li class="active">回复时间</li><li>按回复量</li><li>按点击量</li></ul></div></div>
+                        </div>
+                    	<div class="title">置顶</div>                    </div>
+
+				<ul>
+                
+					<li>
+						<div class="font_box">
+ 							<div class="title">
+								<p>
+<!-- 									<span class="class">
+										<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&mod=List&act=index&class=461&cate=161">
+										[职场天地]
+										</a>									</span> -->
+                                    
+                                    <a style="color:#ff3300;font-weight:bold;" href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=Detail&amp;act=index&amp;id=2710125" title="【枪林弹雨中成长】系列故事汇总贴，最新上映：《沸腾的战场》" target="_blank">【枪林弹雨中成长】系列故事汇总贴，最新上映：《沸腾的战场》</a>
+						            <img title="全局置顶" src="http://xinsheng-image.huawei.com/cn/forumimage/data/uploads/2014/0904/17/54083069061f0.gif"><img title="频道推荐" src="http://xinsheng-image.huawei.com/cn/forumimage/data/uploads/2014/1025/17/544b6961bf861.gif"><img title="图片" src="http://xinsheng-image.huawei.com/cn/forumimage/data/uploads/2014/0904/17/5408305ca4d71.gif">								</p>
+								<span class="fr">51688</span>
+							</div>
+ 							<div class="pro">
+ 								<!-- <span class="fr">82</span>
+ 								<span class="iconUser">
+	 							<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=space&mod=Index&act=view&maskId=115">华为家事<span title="组织认证用户" class="space_rz_blue"></span></a></span>
+ 								<span class="iconWrite">发表在 <a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&mod=List&act=index&class=461&cate=161">[职场天地]</a></span><span class="iconDate">发表时间 2015-12-10 09:30</span><span class="iconDate">最后回复 2016-06-03 07:05</span> -->
+								<span class="fr">82</span>
+								<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=space&amp;mod=Index&amp;act=view&amp;maskId=115">华为家事<span title="组织认证用户" class="space_rz_blue"></span>								&nbsp;</a>
+																于2015-12-10 09:30								发表在 <a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=List&amp;act=index&amp;class=461&amp;cate=161">[职场天地]</a>								 最后回复 2016-06-03 07:05							</div>
+						</div>
+						<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=space&amp;mod=Index&amp;act=view&amp;maskId=115">
+												<img src="http://xinsheng-image.huawei.com/cn/forumimage/data/uploads/2015/0906/15/55ebe4d75eab4.jpg"></a>
+
+					</li>
+					<li class="odd">
+						<div class="font_box">
+ 							<div class="title">
+								<p>
+<!-- 									<span class="class">
+										<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&mod=List&act=index&class=461&cate=161">
+										[职场天地]
+										</a>									</span> -->
+                                    
+                                    <a style="color:#ff6600;font-weight:bold;" href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=Detail&amp;act=index&amp;id=2774271" title="人生攒满回忆就是幸福。我们在等着你，把所有的故事都说给心声。（含投稿入围公示）" target="_blank">人生攒满回忆就是幸福。我们在等着你，把所有的故事都说给心声。（含投...</a>
+						            <img title="全局置顶" src="http://xinsheng-image.huawei.com/cn/forumimage/data/uploads/2014/0904/17/54083069061f0.gif"><img title="频道推荐" src="http://xinsheng-image.huawei.com/cn/forumimage/data/uploads/2014/1025/17/544b6961bf861.gif"><img title="图片" src="http://xinsheng-image.huawei.com/cn/forumimage/data/uploads/2014/0904/17/5408305ca4d71.gif">								</p>
+								<span class="fr">65984</span>
+							</div>
+ 							<div class="pro">
+ 								<!-- <span class="fr">41</span>
+ 								<span class="iconUser">
+	 							<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=space&mod=Index&act=view&maskId=115">华为家事<span title="组织认证用户" class="space_rz_blue"></span></a></span>
+ 								<span class="iconWrite">发表在 <a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&mod=List&act=index&class=461&cate=161">[职场天地]</a></span><span class="iconDate">发表时间 2016-01-26 17:58</span><span class="iconDate">最后回复 2016-06-02 23:00</span> -->
+								<span class="fr">41</span>
+								<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=space&amp;mod=Index&amp;act=view&amp;maskId=115">华为家事<span title="组织认证用户" class="space_rz_blue"></span>								&nbsp;</a>
+																于2016-01-26 17:58								发表在 <a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=List&amp;act=index&amp;class=461&amp;cate=161">[职场天地]</a>								 最后回复 2016-06-02 23:00							</div>
+						</div>
+						<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=space&amp;mod=Index&amp;act=view&amp;maskId=115">
+												<img src="http://xinsheng-image.huawei.com/cn/forumimage/data/uploads/2015/0906/15/55ebe4d75eab4.jpg"></a>
+
+					</li>
+					<li>
+						<div class="font_box">
+ 							<div class="title">
+								<p>
+<!-- 									<span class="class">
+										<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&mod=List&act=index&class=461&cate=167">
+										[其它]
+										</a>									</span> -->
+                                    
+                                    <a style="color:#00cc00;font-weight:bold;" href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=Detail&amp;act=index&amp;id=2935251" title="“通信大观园”系列丛书第14部新书---《政企ICT数字化转型》正式推出，电子版本下载路径开放三天！" target="_blank">“通信大观园”系列丛书第14部新书---《政企ICT数字化转型》正式推...</a>
+						            <img title="版块置顶" src="http://xinsheng-image.huawei.com/cn/forumimage/data/uploads/2014/0904/17/540830717e8e7.gif">								</p>
+								<span class="fr">1526</span>
+							</div>
+ 							<div class="pro">
+ 								<!-- <span class="fr">26</span>
+ 								<span class="iconUser">
+	 							<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=space&mod=Index&act=view&maskId=491943">通信大观园</a></span>
+ 								<span class="iconWrite">发表在 <a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&mod=List&act=index&class=461&cate=167">[其它]</a></span><span class="iconDate">发表时间 2016-05-25 11:29</span><span class="iconDate">最后回复 2016-06-04 06:41</span> -->
+								<span class="fr">26</span>
+								<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=space&amp;mod=Index&amp;act=view&amp;maskId=491943">通信大观园								&nbsp;</a>
+																于2016-05-25 11:29								发表在 <a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=List&amp;act=index&amp;class=461&amp;cate=167">[其它]</a>								 最后回复 2016-06-04 06:41							</div>
+						</div>
+						<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=space&amp;mod=Index&amp;act=view&amp;maskId=491943">
+												<img src="http://xinsheng.huawei.com/cn/public/img/user_pic.gif"></a>
+
+					</li>
+				</ul>			<div class="bbs_list_title">
+				<div class="title">版块主题</div>
+				
+				
+			</div>
+			<ul>
+									<li>
+						<div class="font_box">
+							<div class="title">
+								<p>
+<!-- 									<span class="class">
+									<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&mod=List&act=index&class=461&cate=167">[其它]</a>									</span> -->
+                                    									<a title="今天的温度有多高，看马路就知道了 （亮点在后方）" target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=Detail&amp;act=index&amp;id=2948179">今天的温度有多高，看马路就知道了 （亮点在后方）</a>
+                                    <img title="图片" src="http://xinsheng-image.huawei.com/cn/forumimage/data/uploads/2014/0904/17/5408305ca4d71.gif">								</p>
+								<span class="fr">7552</span>
+							</div>
+							<div class="pro">
+								<span class="fr">29</span>
+								<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=space&amp;mod=Index&amp;act=view&amp;maskId=1251111">
+									把鸡汤当早餐																		&nbsp;</a>
+																于2016-06-03 17:24发表
+								在 <a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=List&amp;act=index&amp;class=461&amp;cate=167">[其它]</a>								 最后回复 2016-06-05 16:53							</div>
+						</div>
+						<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=space&amp;mod=Index&amp;act=view&amp;maskId=1251111">
+							                    	<img src="http://xinsheng-image.huawei.com/cn/forumimage/data/uploads/2016/0512/23/57349d8172bec.jpg">	                    </a>
+					</li>					<li class="odd">
+						<div class="font_box">
+							<div class="title">
+								<p>
+<!-- 									<span class="class">
+									<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&mod=List&act=index&class=461&cate=239">[求助咨询]</a>									</span> -->
+                                    									<a title="求助:深圳集体户口首页" target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=Detail&amp;act=index&amp;id=2949555">求助:深圳集体户口首页</a>
+                                    								</p>
+								<span class="fr">98</span>
+							</div>
+							<div class="pro">
+								<span class="fr">1</span>
+								<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=space&amp;mod=Index&amp;act=view&amp;maskId=1261999">
+									爷爷被蛇妖抓走了																		&nbsp;</a>
+																于2016-06-05 15:17发表
+								在 <a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=List&amp;act=index&amp;class=461&amp;cate=239">[求助咨询]</a>								 最后回复 2016-06-05 16:52							</div>
+						</div>
+						<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=space&amp;mod=Index&amp;act=view&amp;maskId=1261999">
+							                    	<img src="http://xinsheng.huawei.com/cn/public/img/user_pic.gif">	                    </a>
+					</li>					<li>
+						<div class="font_box">
+							<div class="title">
+								<p>
+<!-- 									<span class="class">
+									<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&mod=List&act=index&class=461&cate=239">[求助咨询]</a>									</span> -->
+                                    									<a title="请大家说说是回湖北上学呢？还是留在帝都上个普通的小学？" target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=Detail&amp;act=index&amp;id=2949029">请大家说说是回湖北上学呢？还是留在帝都上个普通的小学？</a>
+                                    								</p>
+								<span class="fr">1087</span>
+							</div>
+							<div class="pro">
+								<span class="fr">7</span>
+								<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=space&amp;mod=Index&amp;act=view&amp;maskId=1162165">
+									小熊熊二																		&nbsp;</a>
+																于2016-06-04 17:51发表
+								在 <a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=List&amp;act=index&amp;class=461&amp;cate=239">[求助咨询]</a>								 最后回复 2016-06-05 16:44							</div>
+						</div>
+						<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=space&amp;mod=Index&amp;act=view&amp;maskId=1162165">
+							                    	<img src="http://xinsheng-image.huawei.com/cn/forumimage/data/uploads/2015/1215/15/566fc6e9472df.jpg">	                    </a>
+					</li>					<li class="odd">
+						<div class="font_box">
+							<div class="title">
+								<p>
+<!-- 									<span class="class">
+									<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&mod=List&act=index&class=461&cate=167">[其它]</a>									</span> -->
+                                    									<a title="合同期内房东要把房子卖掉，应该怎么办？" target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=Detail&amp;act=index&amp;id=2949567">合同期内房东要把房子卖掉，应该怎么办？</a>
+                                    								</p>
+								<span class="fr">369</span>
+							</div>
+							<div class="pro">
+								<span class="fr">3</span>
+								<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=space&amp;mod=Index&amp;act=view&amp;maskId=1224895">
+									满载火车厢																		&nbsp;</a>
+																于2016-06-05 15:36发表
+								在 <a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=List&amp;act=index&amp;class=461&amp;cate=167">[其它]</a>								 最后回复 2016-06-05 16:41							</div>
+						</div>
+						<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=space&amp;mod=Index&amp;act=view&amp;maskId=1224895">
+							                    	<img src="http://xinsheng.huawei.com/cn/public/img/user_pic.gif">	                    </a>
+					</li>					<li>
+						<div class="font_box">
+							<div class="title">
+								<p>
+<!-- 									<span class="class">
+									<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&mod=List&act=index&class=461&cate=161">[职场天地]</a>									</span> -->
+                                    									<a title="怎么才能把豆腐磨好？Fellow龙国柱说，用一辈子做“一条线”" target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=Detail&amp;act=index&amp;id=2945739">怎么才能把豆腐磨好？Fellow龙国柱说，用一辈子做“一条线”</a>
+                                    <img title="频道推荐" src="http://xinsheng-image.huawei.com/cn/forumimage/data/uploads/2014/1025/17/544b6961bf861.gif"><img title="图片" src="http://xinsheng-image.huawei.com/cn/forumimage/data/uploads/2014/0904/17/5408305ca4d71.gif">								</p>
+								<span class="fr">12962</span>
+							</div>
+							<div class="pro">
+								<span class="fr">35</span>
+								<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=space&amp;mod=Index&amp;act=view&amp;maskId=1260051">
+									借个火丁																		&nbsp;</a>
+																于2016-06-01 23:04发表
+								在 <a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=List&amp;act=index&amp;class=461&amp;cate=161">[职场天地]</a>								 最后回复 2016-06-05 16:39							</div>
+						</div>
+						<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=space&amp;mod=Index&amp;act=view&amp;maskId=1260051">
+							                    	<img src="http://xinsheng-image.huawei.com/cn/forumimage/data/uploads/2016/0601/11/574e567016fb1.jpg">	                    </a>
+					</li>					<li class="odd">
+						<div class="font_box">
+							<div class="title">
+								<p>
+<!-- 									<span class="class">
+									<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&mod=List&act=index&class=461&cate=167">[其它]</a>									</span> -->
+                                    									<a title="身份证认领（陆遥）" target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=Detail&amp;act=index&amp;id=2949457">身份证认领（陆遥）</a>
+                                    								</p>
+								<span class="fr">381</span>
+							</div>
+							<div class="pro">
+								<span class="fr">4</span>
+								<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=space&amp;mod=Index&amp;act=view&amp;maskId=811471">
+									NoAnswer																		&nbsp;</a>
+																于2016-06-05 12:30发表
+								在 <a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=List&amp;act=index&amp;class=461&amp;cate=167">[其它]</a>								 最后回复 2016-06-05 16:34							</div>
+						</div>
+						<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=space&amp;mod=Index&amp;act=view&amp;maskId=811471">
+							                    	<img src="http://xinsheng.huawei.com/cn/public/img/user_pic.gif">	                    </a>
+					</li>					<li>
+						<div class="font_box">
+							<div class="title">
+								<p>
+<!-- 									<span class="class">
+									<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&mod=List&act=index&class=461&cate=167">[其它]</a>									</span> -->
+                                    									<a title="老婆要跟我离婚怎么办？？？？？" target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=Detail&amp;act=index&amp;id=2948803">老婆要跟我离婚怎么办？？？？？</a>
+                                    								</p>
+								<span class="fr">8828</span>
+							</div>
+							<div class="pro">
+								<span class="fr">58</span>
+								<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=space&amp;mod=Index&amp;act=view&amp;maskId=952979">
+									独孤求C																		&nbsp;</a>
+																于2016-06-04 12:40发表
+								在 <a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=List&amp;act=index&amp;class=461&amp;cate=167">[其它]</a>								 最后回复 2016-06-05 16:29							</div>
+						</div>
+						<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=space&amp;mod=Index&amp;act=view&amp;maskId=952979">
+							                    	<img src="http://xinsheng.huawei.com/cn/public/img/user_pic.gif">	                    </a>
+					</li>					<li class="odd">
+						<div class="font_box">
+							<div class="title">
+								<p>
+<!-- 									<span class="class">
+									<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&mod=List&act=index&class=461&cate=167">[其它]</a>									</span> -->
+                                    									<a title="恶心的端午盒子" target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=Detail&amp;act=index&amp;id=2947693">恶心的端午盒子</a>
+                                    								</p>
+								<span class="fr">4365</span>
+							</div>
+							<div class="pro">
+								<span class="fr">13</span>
+								<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=space&amp;mod=Index&amp;act=view&amp;maskId=1185363">
+									不愿做XX的人																		&nbsp;</a>
+																于2016-06-03 12:19发表
+								在 <a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=List&amp;act=index&amp;class=461&amp;cate=167">[其它]</a>								 最后回复 2016-06-05 16:28							</div>
+						</div>
+						<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=space&amp;mod=Index&amp;act=view&amp;maskId=1185363">
+							                    	<img src="http://xinsheng-image.huawei.com/cn/forumimage/data/uploads/2016/0119/13/569dd074bb147.jpg">	                    </a>
+					</li>					<li>
+						<div class="font_box">
+							<div class="title">
+								<p>
+<!-- 									<span class="class">
+									<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&mod=List&act=index&class=461&cate=239">[求助咨询]</a>									</span> -->
+                                    									<a title="早上到的很早算加班吗？" target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=Detail&amp;act=index&amp;id=2949177">早上到的很早算加班吗？</a>
+                                    								</p>
+								<span class="fr">1725</span>
+							</div>
+							<div class="pro">
+								<span class="fr">28</span>
+								<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=space&amp;mod=Index&amp;act=view&amp;maskId=1261861">
+									罗宾007																		&nbsp;</a>
+																于2016-06-04 21:28发表
+								在 <a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=List&amp;act=index&amp;class=461&amp;cate=239">[求助咨询]</a>								 最后回复 2016-06-05 16:23							</div>
+						</div>
+						<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=space&amp;mod=Index&amp;act=view&amp;maskId=1261861">
+							                    	<img src="http://xinsheng.huawei.com/cn/public/img/user_pic.gif">	                    </a>
+					</li>					<li class="odd">
+						<div class="font_box">
+							<div class="title">
+								<p>
+<!-- 									<span class="class">
+									<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&mod=List&act=index&class=461&cate=157">[管理思考]</a>									</span> -->
+                                    									<a title="华为“迷茫论”核心是危机意识" target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=Detail&amp;act=index&amp;id=2949251">华为“迷茫论”核心是危机意识</a>
+                                    <img title="频道推荐" src="http://xinsheng-image.huawei.com/cn/forumimage/data/uploads/2014/1025/17/544b6961bf861.gif">								</p>
+								<span class="fr">1053</span>
+							</div>
+							<div class="pro">
+								<span class="fr">3</span>
+								<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=space&amp;mod=Index&amp;act=view&amp;maskId=1234231">
+									金光大道																		&nbsp;</a>
+																于2016-06-04 22:51发表
+								在 <a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=List&amp;act=index&amp;class=461&amp;cate=157">[管理思考]</a>								 最后回复 2016-06-05 16:21							</div>
+						</div>
+						<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=space&amp;mod=Index&amp;act=view&amp;maskId=1234231">
+							                    	<img src="http://xinsheng-image.huawei.com/cn/forumimage/data/uploads/2016/0408/10/570717f9cb61c.png">	                    </a>
+					</li>					<li>
+						<div class="font_box">
+							<div class="title">
+								<p>
+<!-- 									<span class="class">
+									<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&mod=List&act=index&class=461&cate=239">[求助咨询]</a>									</span> -->
+                                    									<a title="求助，北京治疗胃病比较好的医院" target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=Detail&amp;act=index&amp;id=2949549">求助，北京治疗胃病比较好的医院</a>
+                                    								</p>
+								<span class="fr">77</span>
+							</div>
+							<div class="pro">
+								<span class="fr">1</span>
+								<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=space&amp;mod=Index&amp;act=view&amp;maskId=1262007">
+									我要养家糊口																		&nbsp;</a>
+																于2016-06-05 15:12发表
+								在 <a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=List&amp;act=index&amp;class=461&amp;cate=239">[求助咨询]</a>								 最后回复 2016-06-05 16:11							</div>
+						</div>
+						<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=space&amp;mod=Index&amp;act=view&amp;maskId=1262007">
+							                    	<img src="http://xinsheng.huawei.com/cn/public/img/user_pic.gif">	                    </a>
+					</li>					<li class="odd">
+						<div class="font_box">
+							<div class="title">
+								<p>
+<!-- 									<span class="class">
+									<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&mod=List&act=index&class=461&cate=161">[职场天地]</a>									</span> -->
+                                    									<a title="开始不让穿凉鞋上班了，门卫盯着大家脚提醒，什么情况？" target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=Detail&amp;act=index&amp;id=2947285">开始不让穿凉鞋上班了，门卫盯着大家脚提醒，什么情况？</a>
+                                    								</p>
+								<span class="fr">5449</span>
+							</div>
+							<div class="pro">
+								<span class="fr">55</span>
+								<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=space&amp;mod=Index&amp;act=view&amp;maskId=616037">
+									乔丹23																		&nbsp;</a>
+																于2016-06-03 08:39发表
+								在 <a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=List&amp;act=index&amp;class=461&amp;cate=161">[职场天地]</a>								 最后回复 2016-06-05 16:10							</div>
+						</div>
+						<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=space&amp;mod=Index&amp;act=view&amp;maskId=616037">
+							                    	<img src="http://xinsheng.huawei.com/cn/public/img/user_pic.gif">	                    </a>
+					</li>					<li>
+						<div class="font_box">
+							<div class="title">
+								<p>
+<!-- 									<span class="class">
+									<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&mod=List&act=index&class=461&cate=163">[业界动态]</a>									</span> -->
+                                    									<a title="大家余额宝里都放多少钱？闲钱应该放哪呢？" target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=Detail&amp;act=index&amp;id=2927653">大家余额宝里都放多少钱？闲钱应该放哪呢？</a>
+                                    								</p>
+								<span class="fr">48698</span>
+							</div>
+							<div class="pro">
+								<span class="fr">221</span>
+								<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=space&amp;mod=Index&amp;act=view&amp;maskId=708719">
+									放飞心情去旅行																		&nbsp;</a>
+																于2016-05-19 10:50发表
+								在 <a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=List&amp;act=index&amp;class=461&amp;cate=163">[业界动态]</a>								 最后回复 2016-06-05 16:07							</div>
+						</div>
+						<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=space&amp;mod=Index&amp;act=view&amp;maskId=708719">
+							                    	<img src="http://xinsheng.huawei.com/cn/public/img/user_pic.gif">	                    </a>
+					</li>					<li class="odd">
+						<div class="font_box">
+							<div class="title">
+								<p>
+<!-- 									<span class="class">
+									<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&mod=List&act=index&class=461&cate=167">[其它]</a>									</span> -->
+                                    									<a title="500w让整个论坛都酸了" target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=Detail&amp;act=index&amp;id=2949445">500w让整个论坛都酸了</a>
+                                    								</p>
+								<span class="fr">1807</span>
+							</div>
+							<div class="pro">
+								<span class="fr">5</span>
+								<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=space&amp;mod=Index&amp;act=view&amp;maskId=57901">
+									恨爹不成刚																		&nbsp;</a>
+																于2016-06-05 12:21发表
+								在 <a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=List&amp;act=index&amp;class=461&amp;cate=167">[其它]</a>								 最后回复 2016-06-05 16:00							</div>
+						</div>
+						<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=space&amp;mod=Index&amp;act=view&amp;maskId=57901">
+							                    	<img src="http://xinsheng-image.huawei.com/cn/forumimage/data/uploads/2013/0306/23/51375d449c544.jpg">	                    </a>
+					</li>					<li>
+						<div class="font_box">
+							<div class="title">
+								<p>
+<!-- 									<span class="class">
+									<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&mod=List&act=index&class=461&cate=167">[其它]</a>									</span> -->
+                                    									<a title="今天眼看着一个女的把一辆奔驰给蹭了！！！！" target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=Detail&amp;act=index&amp;id=2946787">今天眼看着一个女的把一辆奔驰给蹭了！！！！</a>
+                                    								</p>
+								<span class="fr">12573</span>
+							</div>
+							<div class="pro">
+								<span class="fr">29</span>
+								<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=space&amp;mod=Index&amp;act=view&amp;maskId=1144979">
+									三十没立																		&nbsp;</a>
+																于2016-06-02 18:20发表
+								在 <a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=List&amp;act=index&amp;class=461&amp;cate=167">[其它]</a>								 最后回复 2016-06-05 15:58							</div>
+						</div>
+						<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=space&amp;mod=Index&amp;act=view&amp;maskId=1144979">
+							                    	<img src="http://xinsheng-image.huawei.com/cn/forumimage/data/uploads/2011/0126/09/4d3f730c1598a.gif">	                    </a>
+					</li>					<li class="odd">
+						<div class="font_box">
+							<div class="title">
+								<p>
+<!-- 									<span class="class">
+									<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&mod=List&act=index&class=461&cate=167">[其它]</a>									</span> -->
+                                    									<a title="房价涨跌之我见" target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=Detail&amp;act=index&amp;id=2949527">房价涨跌之我见</a>
+                                    								</p>
+								<span class="fr">499</span>
+							</div>
+							<div class="pro">
+								<span class="fr">1</span>
+								<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=space&amp;mod=Index&amp;act=view&amp;maskId=864361">
+									行者2020																		&nbsp;</a>
+																于2016-06-05 14:45发表
+								在 <a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=List&amp;act=index&amp;class=461&amp;cate=167">[其它]</a>								 最后回复 2016-06-05 15:38							</div>
+						</div>
+						<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=space&amp;mod=Index&amp;act=view&amp;maskId=864361">
+							                    	<img src="http://xinsheng.huawei.com/cn/public/img/user_pic.gif">	                    </a>
+					</li>					<li>
+						<div class="font_box">
+							<div class="title">
+								<p>
+<!-- 									<span class="class">
+									<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&mod=List&act=index&class=461&cate=163">[业界动态]</a>									</span> -->
+                                    									<a title="怎样看待Facebook 的TIP计划对传统电信业务的影响。" target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=Detail&amp;act=index&amp;id=2938743">怎样看待Facebook 的TIP计划对传统电信业务的影响。</a>
+                                    								</p>
+								<span class="fr">2383</span>
+							</div>
+							<div class="pro">
+								<span class="fr">30</span>
+								<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=space&amp;mod=Index&amp;act=view&amp;maskId=387489">
+									内海幸之																		&nbsp;</a>
+																于2016-05-27 16:34发表
+								在 <a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=List&amp;act=index&amp;class=461&amp;cate=163">[业界动态]</a>								 最后回复 2016-06-05 15:35							</div>
+						</div>
+						<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=space&amp;mod=Index&amp;act=view&amp;maskId=387489">
+							                    	<img src="http://xinsheng-image.huawei.com/cn/forumimage/data/uploads/2011/0817/13/4e4b4cb4dc8f3.jpg">	                    </a>
+					</li>					<li class="odd">
+						<div class="font_box">
+							<div class="title">
+								<p>
+<!-- 									<span class="class">
+									<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&mod=List&act=index&class=461&cate=157">[管理思考]</a>									</span> -->
+                                    									<a title="最近部门的氛围越来越不对了" target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=Detail&amp;act=index&amp;id=2925541">最近部门的氛围越来越不对了</a>
+                                    								</p>
+								<span class="fr">24317</span>
+							</div>
+							<div class="pro">
+								<span class="fr">79</span>
+								<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=space&amp;mod=Index&amp;act=view&amp;maskId=1252731">
+									该骂的要骂的																		&nbsp;</a>
+																于2016-05-17 19:58发表
+								在 <a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=List&amp;act=index&amp;class=461&amp;cate=157">[管理思考]</a>								 最后回复 2016-06-05 15:31							</div>
+						</div>
+						<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=space&amp;mod=Index&amp;act=view&amp;maskId=1252731">
+							                    	<img src="http://xinsheng-image.huawei.com/cn/forumimage/data/uploads/2016/0304/20/56d979f1dd50c.png">	                    </a>
+					</li>					<li>
+						<div class="font_box">
+							<div class="title">
+								<p>
+<!-- 									<span class="class">
+									<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&mod=List&act=index&class=461&cate=161">[职场天地]</a>									</span> -->
+                                    									<a title="【国际惯例】哥走了，拜了个拜" target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=Detail&amp;act=index&amp;id=2947679">【国际惯例】哥走了，拜了个拜</a>
+                                    								</p>
+								<span class="fr">4413</span>
+							</div>
+							<div class="pro">
+								<span class="fr">26</span>
+								<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=space&amp;mod=Index&amp;act=view&amp;maskId=1163827">
+									伙呆不了一个月																		&nbsp;</a>
+																于2016-06-03 12:05发表
+								在 <a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=List&amp;act=index&amp;class=461&amp;cate=161">[职场天地]</a>								 最后回复 2016-06-05 15:29							</div>
+						</div>
+						<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=space&amp;mod=Index&amp;act=view&amp;maskId=1163827">
+							                    	<img src="http://xinsheng-image.huawei.com/cn/forumimage/data/uploads/2015/1218/12/56738866af626.PNG">	                    </a>
+					</li>					<li class="odd">
+						<div class="font_box">
+							<div class="title">
+								<p>
+<!-- 									<span class="class">
+									<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&mod=List&act=index&class=461&cate=161">[职场天地]</a>									</span> -->
+                                    									<a title="昨天车停F4地库被蹭了，希望对方看到了联系本人。" target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=Detail&amp;act=index&amp;id=2948579">昨天车停F4地库被蹭了，希望对方看到了联系本人。</a>
+                                    <img title="图片" src="http://xinsheng-image.huawei.com/cn/forumimage/data/uploads/2014/0904/17/5408305ca4d71.gif"><img title="附件" src="http://xinsheng-image.huawei.com/cn/forumimage/data/uploads/2014/0904/17/540830ad65328.gif">								</p>
+								<span class="fr">3190</span>
+							</div>
+							<div class="pro">
+								<span class="fr">22</span>
+								<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=space&amp;mod=Index&amp;act=view&amp;maskId=1221781">
+									斗奋者_																		&nbsp;</a>
+																于2016-06-04 07:09发表
+								在 <a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=List&amp;act=index&amp;class=461&amp;cate=161">[职场天地]</a>								 最后回复 2016-06-05 15:28							</div>
+						</div>
+						<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=space&amp;mod=Index&amp;act=view&amp;maskId=1221781">
+							                    	<img src="http://xinsheng.huawei.com/cn/public/img/user_pic.gif">	                    </a>
+					</li>					<li>
+						<div class="font_box">
+							<div class="title">
+								<p>
+<!-- 									<span class="class">
+									<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&mod=List&act=index&class=461&cate=167">[其它]</a>									</span> -->
+                                    									<a title="龙岗中心城，金地龙城中央～44300均价，这个楼盘怎样呢" target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=Detail&amp;act=index&amp;id=2949421">龙岗中心城，金地龙城中央～44300均价，这个楼盘怎样呢</a>
+                                    								</p>
+								<span class="fr">424</span>
+							</div>
+							<div class="pro">
+								<span class="fr">3</span>
+								<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=space&amp;mod=Index&amp;act=view&amp;maskId=671503">
+									怡云you																		&nbsp;</a>
+																于2016-06-05 11:37发表
+								在 <a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=List&amp;act=index&amp;class=461&amp;cate=167">[其它]</a>								 最后回复 2016-06-05 15:22							</div>
+						</div>
+						<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=space&amp;mod=Index&amp;act=view&amp;maskId=671503">
+							                    	<img src="http://xinsheng.huawei.com/cn/public/img/user_pic.gif">	                    </a>
+					</li>					<li class="odd">
+						<div class="font_box">
+							<div class="title">
+								<p>
+<!-- 									<span class="class">
+									<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&mod=List&act=index&class=461&cate=167">[其它]</a>									</span> -->
+                                    									<a title="南京有人想买路虎发现神行这款车的吗" target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=Detail&amp;act=index&amp;id=2949471">南京有人想买路虎发现神行这款车的吗</a>
+                                    								</p>
+								<span class="fr">258</span>
+							</div>
+							<div class="pro">
+								<span class="fr">5</span>
+								<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=space&amp;mod=Index&amp;act=view&amp;maskId=1155381">
+									大干快上																		&nbsp;</a>
+																于2016-06-05 12:47发表
+								在 <a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=List&amp;act=index&amp;class=461&amp;cate=167">[其它]</a>								 最后回复 2016-06-05 15:13							</div>
+						</div>
+						<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=space&amp;mod=Index&amp;act=view&amp;maskId=1155381">
+							                    	<img src="http://xinsheng.huawei.com/cn/public/img/user_pic.gif">	                    </a>
+					</li>					<li>
+						<div class="font_box">
+							<div class="title">
+								<p>
+<!-- 									<span class="class">
+									<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&mod=List&act=index&class=461&cate=167">[其它]</a>									</span> -->
+                                    									<a title="做外包三年多了，工资还是*k" target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=Detail&amp;act=index&amp;id=2948323">做外包三年多了，工资还是*k</a>
+                                    								</p>
+								<span class="fr">3259</span>
+							</div>
+							<div class="pro">
+								<span class="fr">7</span>
+								<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=space&amp;mod=Index&amp;act=view&amp;maskId=822799">
+									十一月份的静电																		&nbsp;</a>
+																于2016-06-03 19:18发表
+								在 <a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=List&amp;act=index&amp;class=461&amp;cate=167">[其它]</a>								 最后回复 2016-06-05 15:02							</div>
+						</div>
+						<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=space&amp;mod=Index&amp;act=view&amp;maskId=822799">
+							                    	<img src="http://xinsheng-image.huawei.com/cn/forumimage/data/uploads/2014/0428/20/535e4c55ca4fa.jpg">	                    </a>
+					</li>					<li class="odd">
+						<div class="font_box">
+							<div class="title">
+								<p>
+<!-- 									<span class="class">
+									<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&mod=List&act=index&class=461&cate=239">[求助咨询]</a>									</span> -->
+                                    									<a title="转岗咨询" target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=Detail&amp;act=index&amp;id=2940667">转岗咨询</a>
+                                    								</p>
+								<span class="fr">1397</span>
+							</div>
+							<div class="pro">
+								<span class="fr">8</span>
+								<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=space&amp;mod=Index&amp;act=view&amp;maskId=471825">
+									JLR																		&nbsp;</a>
+																于2016-05-29 09:26发表
+								在 <a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=List&amp;act=index&amp;class=461&amp;cate=239">[求助咨询]</a>								 最后回复 2016-06-05 14:52							</div>
+						</div>
+						<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=space&amp;mod=Index&amp;act=view&amp;maskId=471825">
+							                    	<img src="http://xinsheng.huawei.com/cn/public/img/user_pic.gif">	                    </a>
+					</li>					<li>
+						<div class="font_box">
+							<div class="title">
+								<p>
+<!-- 									<span class="class">
+									<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&mod=List&act=index&class=461&cate=167">[其它]</a>									</span> -->
+                                    									<a title="新买小米盒子转让" target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=Detail&amp;act=index&amp;id=2949531">新买小米盒子转让</a>
+                                    <img title="图片" src="http://xinsheng-image.huawei.com/cn/forumimage/data/uploads/2014/0904/17/5408305ca4d71.gif"><img title="附件" src="http://xinsheng-image.huawei.com/cn/forumimage/data/uploads/2014/0904/17/540830ad65328.gif">								</p>
+								<span class="fr">107</span>
+							</div>
+							<div class="pro">
+								<span class="fr">0</span>
+								<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=space&amp;mod=Index&amp;act=view&amp;maskId=1017923">
+									z00321269																		&nbsp;</a>
+																于2016-06-05 14:50发表
+								在 <a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=List&amp;act=index&amp;class=461&amp;cate=167">[其它]</a>								 最后回复 2016-06-05 14:50							</div>
+						</div>
+						<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=space&amp;mod=Index&amp;act=view&amp;maskId=1017923">
+							                    	<img src="http://xinsheng.huawei.com/cn/public/img/user_pic.gif">	                    </a>
+					</li>					<li class="odd">
+						<div class="font_box">
+							<div class="title">
+								<p>
+<!-- 									<span class="class">
+									<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&mod=List&act=index&class=461&cate=161">[职场天地]</a>									</span> -->
+                                    									<a title="怎么破，在线等！" target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=Detail&amp;act=index&amp;id=2927497">怎么破，在线等！</a>
+                                    								</p>
+								<span class="fr">1024</span>
+							</div>
+							<div class="pro">
+								<span class="fr">9</span>
+								<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=space&amp;mod=Index&amp;act=view&amp;maskId=1154963">
+									小兵啊呢吧																		&nbsp;</a>
+																于2016-05-19 09:16发表
+								在 <a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=List&amp;act=index&amp;class=461&amp;cate=161">[职场天地]</a>								 最后回复 2016-06-05 14:49							</div>
+						</div>
+						<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=space&amp;mod=Index&amp;act=view&amp;maskId=1154963">
+							                    	<img src="http://xinsheng-image.huawei.com/cn/forumimage/data/uploads/2011/0126/09/4d3f733e8414c.gif">	                    </a>
+					</li>					<li>
+						<div class="font_box">
+							<div class="title">
+								<p>
+<!-- 									<span class="class">
+									<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&mod=List&act=index&class=461&cate=167">[其它]</a>									</span> -->
+                                    									<a title="松山湖的二手房还可以再接着涨？" target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=Detail&amp;act=index&amp;id=2945599">松山湖的二手房还可以再接着涨？</a>
+                                    <img title="图片" src="http://xinsheng-image.huawei.com/cn/forumimage/data/uploads/2014/0904/17/5408305ca4d71.gif">								</p>
+								<span class="fr">2378</span>
+							</div>
+							<div class="pro">
+								<span class="fr">8</span>
+								<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=space&amp;mod=Index&amp;act=view&amp;maskId=666005">
+									DDC																		&nbsp;</a>
+																于2016-06-01 20:48发表
+								在 <a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=List&amp;act=index&amp;class=461&amp;cate=167">[其它]</a>								 最后回复 2016-06-05 14:39							</div>
+						</div>
+						<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=space&amp;mod=Index&amp;act=view&amp;maskId=666005">
+							                    	<img src="http://xinsheng.huawei.com/cn/public/img/user_pic.gif">	                    </a>
+					</li>					<li class="odd">
+						<div class="font_box">
+							<div class="title">
+								<p>
+<!-- 									<span class="class">
+									<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&mod=List&act=index&class=461&cate=167">[其它]</a>									</span> -->
+                                    									<a title="华为工资单曝光：千人年收入500万 万人年薪百万" target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=Detail&amp;act=index&amp;id=2948717">华为工资单曝光：千人年收入500万 万人年薪百万</a>
+                                    								</p>
+								<span class="fr">5689</span>
+							</div>
+							<div class="pro">
+								<span class="fr">30</span>
+								<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=space&amp;mod=Index&amp;act=view&amp;maskId=1148521">
+									赶紧买房																		&nbsp;</a>
+																于2016-06-04 10:52发表
+								在 <a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=List&amp;act=index&amp;class=461&amp;cate=167">[其它]</a>								 最后回复 2016-06-05 14:33							</div>
+						</div>
+						<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=space&amp;mod=Index&amp;act=view&amp;maskId=1148521">
+							                    	<img src="http://xinsheng-image.huawei.com/cn/forumimage/data/uploads/2011/0126/09/4d3f7332d97f8.gif">	                    </a>
+					</li>					<li>
+						<div class="font_box">
+							<div class="title">
+								<p>
+<!-- 									<span class="class">
+									<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&mod=List&act=index&class=461&cate=239">[求助咨询]</a>									</span> -->
+                                    									<a title="家里翻新了墙面后多久可以入住？" target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=Detail&amp;act=index&amp;id=2941087">家里翻新了墙面后多久可以入住？</a>
+                                    <img title="图片" src="http://xinsheng-image.huawei.com/cn/forumimage/data/uploads/2014/0904/17/5408305ca4d71.gif">								</p>
+								<span class="fr">6069</span>
+							</div>
+							<div class="pro">
+								<span class="fr">94</span>
+								<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=space&amp;mod=Index&amp;act=view&amp;maskId=1258535">
+									北城以北																		&nbsp;</a>
+																于2016-05-29 21:26发表
+								在 <a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=List&amp;act=index&amp;class=461&amp;cate=239">[求助咨询]</a>								 最后回复 2016-06-05 14:29							</div>
+						</div>
+						<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=space&amp;mod=Index&amp;act=view&amp;maskId=1258535">
+							                    	<img src="http://xinsheng-image.huawei.com/cn/forumimage/data/uploads/2011/0126/09/4d3f730c1598a.gif">	                    </a>
+					</li>					<li class="odd">
+						<div class="font_box">
+							<div class="title">
+								<p>
+<!-- 									<span class="class">
+									<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&mod=List&act=index&class=461&cate=167">[其它]</a>									</span> -->
+                                    									<a title="【六一特供】宫崎骏：拒领奥斯卡，一部动画17万张手稿，退休七次的反战斗士（转载）" target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=Detail&amp;act=index&amp;id=2944731">【六一特供】宫崎骏：拒领奥斯卡，一部动画17万张手稿，退休七次的反...</a>
+                                    <img title="图片" src="http://xinsheng-image.huawei.com/cn/forumimage/data/uploads/2014/0904/17/5408305ca4d71.gif">								</p>
+								<span class="fr">1198</span>
+							</div>
+							<div class="pro">
+								<span class="fr">16</span>
+								<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=space&amp;mod=Index&amp;act=view&amp;maskId=1234219">
+									SHASHA																		&nbsp;</a>
+																于2016-06-01 10:53发表
+								在 <a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=List&amp;act=index&amp;class=461&amp;cate=167">[其它]</a>								 最后回复 2016-06-05 14:28							</div>
+						</div>
+						<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=space&amp;mod=Index&amp;act=view&amp;maskId=1234219">
+							                    	<img src="http://xinsheng-image.huawei.com/cn/forumimage/data/uploads/2016/0408/10/570714686e201.jpg">	                    </a>
+					</li>					<li>
+						<div class="font_box">
+							<div class="title">
+								<p>
+<!-- 									<span class="class">
+									<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&mod=List&act=index&class=461&cate=167">[其它]</a>									</span> -->
+                                    									<a title="又一次被新闻又震惊了" target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=Detail&amp;act=index&amp;id=2948787">又一次被新闻又震惊了</a>
+                                    								</p>
+								<span class="fr">10788</span>
+							</div>
+							<div class="pro">
+								<span class="fr">54</span>
+								<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=space&amp;mod=Index&amp;act=view&amp;maskId=10164">
+									Deer																		&nbsp;</a>
+																于2016-06-04 12:17发表
+								在 <a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=List&amp;act=index&amp;class=461&amp;cate=167">[其它]</a>								 最后回复 2016-06-05 14:26							</div>
+						</div>
+						<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=space&amp;mod=Index&amp;act=view&amp;maskId=10164">
+							                    	<img src="http://xinsheng-image.huawei.com/cn/forumimage/data/uploads/2012/0625/13/4fe7f848ce3cb.png">	                    </a>
+					</li>					<li class="odd">
+						<div class="font_box">
+							<div class="title">
+								<p>
+<!-- 									<span class="class">
+									<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&mod=List&act=index&class=461&cate=239">[求助咨询]</a>									</span> -->
+                                    									<a title="kindle 电子书" target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=Detail&amp;act=index&amp;id=2947405">kindle 电子书</a>
+                                    								</p>
+								<span class="fr">758</span>
+							</div>
+							<div class="pro">
+								<span class="fr">5</span>
+								<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=space&amp;mod=Index&amp;act=view&amp;maskId=603829">
+									看妳妹																		&nbsp;</a>
+																于2016-06-03 09:26发表
+								在 <a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=List&amp;act=index&amp;class=461&amp;cate=239">[求助咨询]</a>								 最后回复 2016-06-05 14:21							</div>
+						</div>
+						<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=space&amp;mod=Index&amp;act=view&amp;maskId=603829">
+							                    	<img src="http://xinsheng.huawei.com/cn/public/img/user_pic.gif">	                    </a>
+					</li>					<li>
+						<div class="font_box">
+							<div class="title">
+								<p>
+<!-- 									<span class="class">
+									<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&mod=List&act=index&class=461&cate=161">[职场天地]</a>									</span> -->
+                                    									<a title="新人小白，请大仙指教！15年绩效打C，意味着什么？16年奖金有影响吗？" target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=Detail&amp;act=index&amp;id=2948983">新人小白，请大仙指教！15年绩效打C，意味着什么？16年奖金有影响吗？</a>
+                                    								</p>
+								<span class="fr">1750</span>
+							</div>
+							<div class="pro">
+								<span class="fr">7</span>
+								<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=space&amp;mod=Index&amp;act=view&amp;maskId=1258233">
+									异乡人777																		&nbsp;</a>
+																于2016-06-04 17:02发表
+								在 <a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=List&amp;act=index&amp;class=461&amp;cate=161">[职场天地]</a>								 最后回复 2016-06-05 14:18							</div>
+						</div>
+						<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=space&amp;mod=Index&amp;act=view&amp;maskId=1258233">
+							                    	<img src="http://xinsheng.huawei.com/cn/public/img/user_pic.gif">	                    </a>
+					</li>					<li class="odd">
+						<div class="font_box">
+							<div class="title">
+								<p>
+<!-- 									<span class="class">
+									<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&mod=List&act=index&class=461&cate=239">[求助咨询]</a>									</span> -->
+                                    									<a title="想买宝马320i、320Li或奥迪A4L的同事一起来讨论下价格" target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=Detail&amp;act=index&amp;id=2806387">想买宝马320i、320Li或奥迪A4L的同事一起来讨论下价格</a>
+                                    								</p>
+								<span class="fr">19709</span>
+							</div>
+							<div class="pro">
+								<span class="fr">152</span>
+								<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=space&amp;mod=Index&amp;act=view&amp;maskId=1217211">
+									南京小幸运																		&nbsp;</a>
+																于2016-02-22 15:44发表
+								在 <a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=List&amp;act=index&amp;class=461&amp;cate=239">[求助咨询]</a>								 最后回复 2016-06-05 14:13							</div>
+						</div>
+						<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=space&amp;mod=Index&amp;act=view&amp;maskId=1217211">
+							                    	<img src="http://xinsheng-image.huawei.com/cn/forumimage/data/uploads/2011/0126/09/4d3f72fdbb7c2.gif">	                    </a>
+					</li>					<li>
+						<div class="font_box">
+							<div class="title">
+								<p>
+<!-- 									<span class="class">
+									<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&mod=List&act=index&class=461&cate=157">[管理思考]</a>									</span> -->
+                                    									<a title="面对鲜花和掌声，不要“陶醉”，不忘初心" target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=Detail&amp;act=index&amp;id=2946041">面对鲜花和掌声，不要“陶醉”，不忘初心</a>
+                                    <img title="频道推荐" src="http://xinsheng-image.huawei.com/cn/forumimage/data/uploads/2014/1025/17/544b6961bf861.gif">								</p>
+								<span class="fr">9789</span>
+							</div>
+							<div class="pro">
+								<span class="fr">60</span>
+								<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=space&amp;mod=Index&amp;act=view&amp;maskId=1042255">
+									变革小兵																		&nbsp;</a>
+																于2016-06-02 10:35发表
+								在 <a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=List&amp;act=index&amp;class=461&amp;cate=157">[管理思考]</a>								 最后回复 2016-06-05 14:10							</div>
+						</div>
+						<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=space&amp;mod=Index&amp;act=view&amp;maskId=1042255">
+							                    	<img src="http://xinsheng-image.huawei.com/cn/forumimage/data/uploads/2015/0630/14/55923c90287b7.JPG">	                    </a>
+					</li>					<li class="odd">
+						<div class="font_box">
+							<div class="title">
+								<p>
+<!-- 									<span class="class">
+									<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&mod=List&act=index&class=461&cate=157">[管理思考]</a>									</span> -->
+                                    									<a title="[转]深圳留不住华为了！东莞特批一块地给华为建员工宿舍" target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=Detail&amp;act=index&amp;id=2949505">[转]深圳留不住华为了！东莞特批一块地给华为建员工宿舍</a>
+                                    								</p>
+								<span class="fr">597</span>
+							</div>
+							<div class="pro">
+								<span class="fr">0</span>
+								<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=space&amp;mod=Index&amp;act=view&amp;maskId=440559">
+									不能重复																		&nbsp;</a>
+																于2016-06-05 14:08发表
+								在 <a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=List&amp;act=index&amp;class=461&amp;cate=157">[管理思考]</a>								 最后回复 2016-06-05 14:08							</div>
+						</div>
+						<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=space&amp;mod=Index&amp;act=view&amp;maskId=440559">
+							                    	<img src="http://xinsheng.huawei.com/cn/public/img/user_pic.gif">	                    </a>
+					</li>					<li>
+						<div class="font_box">
+							<div class="title">
+								<p>
+<!-- 									<span class="class">
+									<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&mod=List&act=index&class=461&cate=239">[求助咨询]</a>									</span> -->
+                                    									<a title="mate8的NFC功能简直反人类" target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=Detail&amp;act=index&amp;id=2948347">mate8的NFC功能简直反人类</a>
+                                    								</p>
+								<span class="fr">1592</span>
+							</div>
+							<div class="pro">
+								<span class="fr">14</span>
+								<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=space&amp;mod=Index&amp;act=view&amp;maskId=1080925">
+									MTSi																		&nbsp;</a>
+																于2016-06-03 19:38发表
+								在 <a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=List&amp;act=index&amp;class=461&amp;cate=239">[求助咨询]</a>								 最后回复 2016-06-05 13:54							</div>
+						</div>
+						<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=space&amp;mod=Index&amp;act=view&amp;maskId=1080925">
+							                    	<img src="http://xinsheng-image.huawei.com/cn/forumimage/data/uploads/2015/0625/08/558b4e232f2f1.jpg">	                    </a>
+					</li>					<li class="odd">
+						<div class="font_box">
+							<div class="title">
+								<p>
+<!-- 									<span class="class">
+									<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&mod=List&act=index&class=461&cate=167">[其它]</a>									</span> -->
+                                    									<a title="能不随意评论征婚帖么，有多少征婚的遇到没素质的？" target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=Detail&amp;act=index&amp;id=2948679">能不随意评论征婚帖么，有多少征婚的遇到没素质的？</a>
+                                    								</p>
+								<span class="fr">2620</span>
+							</div>
+							<div class="pro">
+								<span class="fr">23</span>
+								<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=space&amp;mod=Index&amp;act=view&amp;maskId=795743">
+									HeyMan																		&nbsp;</a>
+																于2016-06-04 10:15发表
+								在 <a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=List&amp;act=index&amp;class=461&amp;cate=167">[其它]</a>								 最后回复 2016-06-05 13:46							</div>
+						</div>
+						<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=space&amp;mod=Index&amp;act=view&amp;maskId=795743">
+							                    	<img src="http://xinsheng.huawei.com/cn/public/img/user_pic.gif">	                    </a>
+					</li>					<li>
+						<div class="font_box">
+							<div class="title">
+								<p>
+<!-- 									<span class="class">
+									<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&mod=List&act=index&class=461&cate=167">[其它]</a>									</span> -->
+                                    									<a title="前段时间炒华为离开深圳因为房价高，估计开发商怕政策打压，现在炒华为人买房不缺钱，离开深圳跟房价没关系是原生家庭问题。" target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=Detail&amp;act=index&amp;id=2948993">前段时间炒华为离开深圳因为房价高，估计开发商怕政策打压，现在炒华为...</a>
+                                    								</p>
+								<span class="fr">2326</span>
+							</div>
+							<div class="pro">
+								<span class="fr">3</span>
+								<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=space&amp;mod=Index&amp;act=view&amp;maskId=604921">
+									面朝大海xuxu																		&nbsp;</a>
+																于2016-06-04 17:09发表
+								在 <a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=List&amp;act=index&amp;class=461&amp;cate=167">[其它]</a>								 最后回复 2016-06-05 13:41							</div>
+						</div>
+						<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=space&amp;mod=Index&amp;act=view&amp;maskId=604921">
+							                    	<img src="http://xinsheng.huawei.com/cn/public/img/user_pic.gif">	                    </a>
+					</li>					<li class="odd">
+						<div class="font_box">
+							<div class="title">
+								<p>
+<!-- 									<span class="class">
+									<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&mod=List&act=index&class=461&cate=239">[求助咨询]</a>									</span> -->
+                                    									<a title="500万的新闻都出来了为啥行政之窗的水准还没改善些" target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=Detail&amp;act=index&amp;id=2949161">500万的新闻都出来了为啥行政之窗的水准还没改善些</a>
+                                    								</p>
+								<span class="fr">2435</span>
+							</div>
+							<div class="pro">
+								<span class="fr">4</span>
+								<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=space&amp;mod=Index&amp;act=view&amp;maskId=115535">
+									D7KorD90																		&nbsp;</a>
+																于2016-06-04 21:06发表
+								在 <a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=List&amp;act=index&amp;class=461&amp;cate=239">[求助咨询]</a>								 最后回复 2016-06-05 13:39							</div>
+						</div>
+						<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=space&amp;mod=Index&amp;act=view&amp;maskId=115535">
+							                    	<img src="http://xinsheng.huawei.com/cn/public/img/user_pic.gif">	                    </a>
+					</li>					<li>
+						<div class="font_box">
+							<div class="title">
+								<p>
+<!-- 									<span class="class">
+									<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&mod=List&act=index&class=461&cate=239">[求助咨询]</a>									</span> -->
+                                    									<a title="关于近一年来东莞飞涨的房价，你们是什么看法？" target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=Detail&amp;act=index&amp;id=2942043">关于近一年来东莞飞涨的房价，你们是什么看法？</a>
+                                    								</p>
+								<span class="fr">3724</span>
+							</div>
+							<div class="pro">
+								<span class="fr">28</span>
+								<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=space&amp;mod=Index&amp;act=view&amp;maskId=1141013">
+									记住自己说过的话																		&nbsp;</a>
+																于2016-05-30 15:02发表
+								在 <a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=List&amp;act=index&amp;class=461&amp;cate=239">[求助咨询]</a>								 最后回复 2016-06-05 13:34							</div>
+						</div>
+						<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=space&amp;mod=Index&amp;act=view&amp;maskId=1141013">
+							                    	<img src="http://xinsheng-image.huawei.com/cn/forumimage/data/uploads/2015/1019/15/5624a219a209d.jpg">	                    </a>
+					</li>					<li class="odd">
+						<div class="font_box">
+							<div class="title">
+								<p>
+<!-- 									<span class="class">
+									<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&mod=List&act=index&class=461&cate=157">[管理思考]</a>									</span> -->
+                                    									<a title="进出办公楼检查包太无聊了，不知道有啥东西可以带走的" target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=Detail&amp;act=index&amp;id=2945245">进出办公楼检查包太无聊了，不知道有啥东西可以带走的</a>
+                                    								</p>
+								<span class="fr">1573</span>
+							</div>
+							<div class="pro">
+								<span class="fr">17</span>
+								<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=space&amp;mod=Index&amp;act=view&amp;maskId=1156077">
+									原味阿萨姆																		&nbsp;</a>
+																于2016-06-01 16:49发表
+								在 <a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=List&amp;act=index&amp;class=461&amp;cate=157">[管理思考]</a>								 最后回复 2016-06-05 13:23							</div>
+						</div>
+						<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=space&amp;mod=Index&amp;act=view&amp;maskId=1156077">
+							                    	<img src="http://xinsheng-image.huawei.com/cn/forumimage/data/uploads/2011/0126/09/4d3f733e8414c.gif">	                    </a>
+					</li>					<li>
+						<div class="font_box">
+							<div class="title">
+								<p>
+<!-- 									<span class="class">
+									<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&mod=List&act=index&class=461&cate=161">[职场天地]</a>									</span> -->
+                                    									<a title="交友群招兵买马中，欢迎积极分子加入" target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=Detail&amp;act=index&amp;id=2929479">交友群招兵买马中，欢迎积极分子加入</a>
+                                    								</p>
+								<span class="fr">488</span>
+							</div>
+							<div class="pro">
+								<span class="fr">2</span>
+								<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=space&amp;mod=Index&amp;act=view&amp;maskId=969807">
+									我表示很淡定																		&nbsp;</a>
+																于2016-05-20 13:19发表
+								在 <a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=List&amp;act=index&amp;class=461&amp;cate=161">[职场天地]</a>								 最后回复 2016-06-05 13:00							</div>
+						</div>
+						<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=space&amp;mod=Index&amp;act=view&amp;maskId=969807">
+							                    	<img src="http://xinsheng.huawei.com/cn/public/img/user_pic.gif">	                    </a>
+					</li>					<li class="odd">
+						<div class="font_box">
+							<div class="title">
+								<p>
+<!-- 									<span class="class">
+									<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&mod=List&act=index&class=461&cate=167">[其它]</a>									</span> -->
+                                    									<a title="还在吗" target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=Detail&amp;act=index&amp;id=2826731">还在吗</a>
+                                    								</p>
+								<span class="fr">17434</span>
+							</div>
+							<div class="pro">
+								<span class="fr">144</span>
+								<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=space&amp;mod=Index&amp;act=view&amp;maskId=639517">
+									我呆不了一个月																		&nbsp;</a>
+																于2016-03-04 15:08发表
+								在 <a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=List&amp;act=index&amp;class=461&amp;cate=167">[其它]</a>								 最后回复 2016-06-05 12:55							</div>
+						</div>
+						<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=space&amp;mod=Index&amp;act=view&amp;maskId=639517">
+							                    	<img src="http://xinsheng-image.huawei.com/cn/forumimage/data/uploads/2014/0409/19/53452dcf3a902.PNG">	                    </a>
+					</li>					<li>
+						<div class="font_box">
+							<div class="title">
+								<p>
+<!-- 									<span class="class">
+									<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&mod=List&act=index&class=461&cate=167">[其它]</a>									</span> -->
+                                    									<a title="西安装修师傅推荐" target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=Detail&amp;act=index&amp;id=2946917">西安装修师傅推荐</a>
+                                    								</p>
+								<span class="fr">199</span>
+							</div>
+							<div class="pro">
+								<span class="fr">5</span>
+								<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=space&amp;mod=Index&amp;act=view&amp;maskId=1226475">
+									Alphama																		&nbsp;</a>
+																于2016-06-02 19:31发表
+								在 <a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=List&amp;act=index&amp;class=461&amp;cate=167">[其它]</a>								 最后回复 2016-06-05 12:51							</div>
+						</div>
+						<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=space&amp;mod=Index&amp;act=view&amp;maskId=1226475">
+							                    	<img src="http://xinsheng-image.huawei.com/cn/forumimage/data/uploads/2016/0304/20/56d979f1dd50c.png">	                    </a>
+					</li>					<li class="odd">
+						<div class="font_box">
+							<div class="title">
+								<p>
+<!-- 									<span class="class">
+									<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&mod=List&act=index&class=461&cate=239">[求助咨询]</a>									</span> -->
+                                    									<a title="咨询  龙岗振业峦山谷这个楼盘咋样" target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=Detail&amp;act=index&amp;id=2949145">咨询  龙岗振业峦山谷这个楼盘咋样</a>
+                                    								</p>
+								<span class="fr">474</span>
+							</div>
+							<div class="pro">
+								<span class="fr">3</span>
+								<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=space&amp;mod=Index&amp;act=view&amp;maskId=725795">
+									杯具的屌丝																		&nbsp;</a>
+																于2016-06-04 20:42发表
+								在 <a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=List&amp;act=index&amp;class=461&amp;cate=239">[求助咨询]</a>								 最后回复 2016-06-05 12:46							</div>
+						</div>
+						<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=space&amp;mod=Index&amp;act=view&amp;maskId=725795">
+							                    	<img src="http://xinsheng.huawei.com/cn/public/img/user_pic.gif">	                    </a>
+					</li>					<li>
+						<div class="font_box">
+							<div class="title">
+								<p>
+<!-- 									<span class="class">
+									<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&mod=List&act=index&class=461&cate=157">[管理思考]</a>									</span> -->
+                                    									<a title="【吐槽】为毛总有人在蹲位前整上一滩尿！！？？" target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=Detail&amp;act=index&amp;id=2947613">【吐槽】为毛总有人在蹲位前整上一滩尿！！？？</a>
+                                    								</p>
+								<span class="fr">3750</span>
+							</div>
+							<div class="pro">
+								<span class="fr">44</span>
+								<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=space&amp;mod=Index&amp;act=view&amp;maskId=379187">
+									灰机已灰																		&nbsp;</a>
+																于2016-06-03 11:28发表
+								在 <a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=List&amp;act=index&amp;class=461&amp;cate=157">[管理思考]</a>								 最后回复 2016-06-05 12:43							</div>
+						</div>
+						<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=space&amp;mod=Index&amp;act=view&amp;maskId=379187">
+							                    	<img src="http://xinsheng-image.huawei.com/cn/forumimage/data/uploads/2011/1201/19/4ed76500a3915.jpg">	                    </a>
+					</li>					<li class="odd">
+						<div class="font_box">
+							<div class="title">
+								<p>
+<!-- 									<span class="class">
+									<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&mod=List&act=index&class=461&cate=239">[求助咨询]</a>									</span> -->
+                                    									<a title="买房首付都交了三个月了，还没拿到购房合同，一般啥情况" target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=Detail&amp;act=index&amp;id=2949461">[<em class="red">未解决</em>]买房首付都交了三个月了，还没拿到购房合同，一般啥情况</a>
+                                    <img title="提问" src="http://xinsheng-image.huawei.com/cn/forumimage/data/uploads/2015/0605/16/55715d03c83b1.gif">								</p>
+								<span class="fr">124</span>
+							</div>
+							<div class="pro">
+								<span class="fr">1</span>
+								<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=space&amp;mod=Index&amp;act=view&amp;maskId=746335">
+									去日阳光																		&nbsp;</a>
+																于2016-06-05 12:40发表
+								在 <a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=List&amp;act=index&amp;class=461&amp;cate=239">[求助咨询]</a>								 最后回复 2016-06-05 12:42							</div>
+						</div>
+						<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=space&amp;mod=Index&amp;act=view&amp;maskId=746335">
+							                    	<img src="http://xinsheng.huawei.com/cn/public/img/user_pic.gif">	                    </a>
+					</li>					<li>
+						<div class="font_box">
+							<div class="title">
+								<p>
+<!-- 									<span class="class">
+									<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&mod=List&act=index&class=461&cate=167">[其它]</a>									</span> -->
+                                    									<a title="2016年北大清华保送名单出来了，广东省23人，其中深圳市12人，东莞市0人" target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=Detail&amp;act=index&amp;id=2947787">2016年北大清华保送名单出来了，广东省23人，其中深圳市12人，东莞市...</a>
+                                    <img title="图片" src="http://xinsheng-image.huawei.com/cn/forumimage/data/uploads/2014/0904/17/5408305ca4d71.gif">								</p>
+								<span class="fr">9964</span>
+							</div>
+							<div class="pro">
+								<span class="fr">90</span>
+								<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=space&amp;mod=Index&amp;act=view&amp;maskId=417943">
+									大部份人就这素质																		&nbsp;</a>
+																于2016-06-03 13:06发表
+								在 <a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=List&amp;act=index&amp;class=461&amp;cate=167">[其它]</a>								 最后回复 2016-06-05 12:40							</div>
+						</div>
+						<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=space&amp;mod=Index&amp;act=view&amp;maskId=417943">
+							                    	<img src="http://xinsheng.huawei.com/cn/public/img/user_pic.gif">	                    </a>
+					</li>					<li class="odd">
+						<div class="font_box">
+							<div class="title">
+								<p>
+<!-- 									<span class="class">
+									<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&mod=List&act=index&class=461&cate=167">[其它]</a>									</span> -->
+                                    									<a title="外包员工也需要尊重" target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=Detail&amp;act=index&amp;id=2947959">外包员工也需要尊重</a>
+                                    								</p>
+								<span class="fr">5226</span>
+							</div>
+							<div class="pro">
+								<span class="fr">40</span>
+								<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=space&amp;mod=Index&amp;act=view&amp;maskId=1097935">
+									以我之名																		&nbsp;</a>
+																于2016-06-03 15:00发表
+								在 <a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=List&amp;act=index&amp;class=461&amp;cate=167">[其它]</a>								 最后回复 2016-06-05 12:39							</div>
+						</div>
+						<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=space&amp;mod=Index&amp;act=view&amp;maskId=1097935">
+							                    	<img src="http://xinsheng-image.huawei.com/cn/forumimage/data/uploads/2015/0721/14/55ade0f4bc19e.jpg">	                    </a>
+					</li>					<li>
+						<div class="font_box">
+							<div class="title">
+								<p>
+<!-- 									<span class="class">
+									<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&mod=List&act=index&class=461&cate=161">[职场天地]</a>									</span> -->
+                                    									<a title="有想从成都到深圳工作的软件开发人员吗？求置换，坐标深圳" target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=Detail&amp;act=index&amp;id=2948541">有想从成都到深圳工作的软件开发人员吗？求置换，坐标深圳</a>
+                                    								</p>
+								<span class="fr">272</span>
+							</div>
+							<div class="pro">
+								<span class="fr">2</span>
+								<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=space&amp;mod=Index&amp;act=view&amp;maskId=1261609">
+									3KS																		&nbsp;</a>
+																于2016-06-04 00:04发表
+								在 <a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=List&amp;act=index&amp;class=461&amp;cate=161">[职场天地]</a>								 最后回复 2016-06-05 12:35							</div>
+						</div>
+						<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=space&amp;mod=Index&amp;act=view&amp;maskId=1261609">
+							                    	<img src="http://xinsheng-image.huawei.com/cn/forumimage/data/uploads/2011/0126/09/4d3f72fdbb7c2.gif">	                    </a>
+					</li>					<li class="odd">
+						<div class="font_box">
+							<div class="title">
+								<p>
+<!-- 									<span class="class">
+									<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&mod=List&act=index&class=461&cate=167">[其它]</a>									</span> -->
+                                    									<a title="华夏银行最新贷款政策！！！" target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=Detail&amp;act=index&amp;id=2949175">华夏银行最新贷款政策！！！</a>
+                                    								</p>
+								<span class="fr">694</span>
+							</div>
+							<div class="pro">
+								<span class="fr">6</span>
+																	<a href="javascript:void(0);" title="null">null</a>								于2016-06-04 21:27发表
+								在 <a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=List&amp;act=index&amp;class=461&amp;cate=167">[其它]</a>								 最后回复 2016-06-05 12:30							</div>
+						</div>
+							                    	<a href="javascript:void(0);">	                    	<img src="http://xinsheng.huawei.com/cn/public/img/user_pic.gif">	                    </a>
+					</li>					<li>
+						<div class="font_box">
+							<div class="title">
+								<p>
+<!-- 									<span class="class">
+									<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&mod=List&act=index&class=461&cate=157">[管理思考]</a>									</span> -->
+                                    									<a title="上班时间不断被各种广告和宣传骚扰，你最讨厌哪些？" target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=Detail&amp;act=index&amp;id=2948279">上班时间不断被各种广告和宣传骚扰，你最讨厌哪些？</a>
+                                    <img title="投票" src="http://xinsheng-image.huawei.com/cn/forumimage/data/uploads/2014/0904/17/540830a35244d.gif">								</p>
+								<span class="fr">549</span>
+							</div>
+							<div class="pro">
+								<span class="fr">7</span>
+								<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=space&amp;mod=Index&amp;act=view&amp;maskId=994641">
+									不会游泳的南方人																		&nbsp;</a>
+																于2016-06-03 18:21发表
+								在 <a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=List&amp;act=index&amp;class=461&amp;cate=157">[管理思考]</a>								 最后回复 2016-06-05 12:16							</div>
+						</div>
+						<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=space&amp;mod=Index&amp;act=view&amp;maskId=994641">
+							                    	<img src="http://xinsheng.huawei.com/cn/public/img/user_pic.gif">	                    </a>
+					</li>					<li class="odd">
+						<div class="font_box">
+							<div class="title">
+								<p>
+<!-- 									<span class="class">
+									<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&mod=List&act=index&class=461&cate=167">[其它]</a>									</span> -->
+                                    									<a title="【松湖传奇】有木有同事出售万科松湖传奇的房子呀~" target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=Detail&amp;act=index&amp;id=2946793">【松湖传奇】有木有同事出售万科松湖传奇的房子呀~</a>
+                                    								</p>
+								<span class="fr">901</span>
+							</div>
+							<div class="pro">
+								<span class="fr">5</span>
+								<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=space&amp;mod=Index&amp;act=view&amp;maskId=1260909">
+									Evan85																		&nbsp;</a>
+																于2016-06-02 18:23发表
+								在 <a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=List&amp;act=index&amp;class=461&amp;cate=167">[其它]</a>								 最后回复 2016-06-05 12:09							</div>
+						</div>
+						<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=space&amp;mod=Index&amp;act=view&amp;maskId=1260909">
+							                    	<img src="http://xinsheng-image.huawei.com/cn/forumimage/data/uploads/2016/0602/18/575007a2f3bdc.jpg">	                    </a>
+					</li>					<li>
+						<div class="font_box">
+							<div class="title">
+								<p>
+<!-- 									<span class="class">
+									<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&mod=List&act=index&class=461&cate=167">[其它]</a>									</span> -->
+                                    									<a title="有松山湖房子要出手的嘛？" target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=Detail&amp;act=index&amp;id=2944361">有松山湖房子要出手的嘛？</a>
+                                    								</p>
+								<span class="fr">1370</span>
+							</div>
+							<div class="pro">
+								<span class="fr">9</span>
+								<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=space&amp;mod=Index&amp;act=view&amp;maskId=1246281">
+									Sagittar																		&nbsp;</a>
+																于2016-05-31 21:51发表
+								在 <a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=List&amp;act=index&amp;class=461&amp;cate=167">[其它]</a>								 最后回复 2016-06-05 11:52							</div>
+						</div>
+						<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=space&amp;mod=Index&amp;act=view&amp;maskId=1246281">
+							                    	<img src="http://xinsheng.huawei.com/cn/public/img/user_pic.gif">	                    </a>
+					</li>					<li class="odd">
+						<div class="font_box">
+							<div class="title">
+								<p>
+<!-- 									<span class="class">
+									<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&mod=List&act=index&class=461&cate=167">[其它]</a>									</span> -->
+                                    									<a title="武汉未来城人才公寓" target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=Detail&amp;act=index&amp;id=2949429">武汉未来城人才公寓</a>
+                                    								</p>
+								<span class="fr">143</span>
+							</div>
+							<div class="pro">
+								<span class="fr">0</span>
+								<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=space&amp;mod=Index&amp;act=view&amp;maskId=1218157">
+									w00365491																		&nbsp;</a>
+																于2016-06-05 11:40发表
+								在 <a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=List&amp;act=index&amp;class=461&amp;cate=167">[其它]</a>								 最后回复 2016-06-05 11:40							</div>
+						</div>
+						<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=space&amp;mod=Index&amp;act=view&amp;maskId=1218157">
+							                    	<img src="http://xinsheng.huawei.com/cn/public/img/user_pic.gif">	                    </a>
+					</li>					<li>
+						<div class="font_box">
+							<div class="title">
+								<p>
+<!-- 									<span class="class">
+									<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&mod=List&act=index&class=461&cate=167">[其它]</a>									</span> -->
+                                    									<a title="一卡通推行什么进展了？" target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=Detail&amp;act=index&amp;id=2941263">[<em class="red">未解决</em>]一卡通推行什么进展了？</a>
+                                    <img title="提问" src="http://xinsheng-image.huawei.com/cn/forumimage/data/uploads/2015/0605/16/55715d03c83b1.gif">								</p>
+								<span class="fr">664</span>
+							</div>
+							<div class="pro">
+								<span class="fr">5</span>
+								<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=space&amp;mod=Index&amp;act=view&amp;maskId=445175">
+									natsu																		&nbsp;</a>
+																于2016-05-30 08:25发表
+								在 <a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=List&amp;act=index&amp;class=461&amp;cate=167">[其它]</a>								 最后回复 2016-06-05 11:24							</div>
+						</div>
+						<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=space&amp;mod=Index&amp;act=view&amp;maskId=445175">
+							                    	<img src="http://xinsheng-image.huawei.com/cn/forumimage/data/uploads/2015/0304/13/54f6932a81bee.jpg">	                    </a>
+					</li>					<li class="odd">
+						<div class="font_box">
+							<div class="title">
+								<p>
+<!-- 									<span class="class">
+									<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&mod=List&act=index&class=461&cate=239">[求助咨询]</a>									</span> -->
+                                    									<a title="有人去过英孚(EF）培训的吗，效果如何？去培训机构还是上网课那个比较好呢，谢谢" target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=Detail&amp;act=index&amp;id=2949417">有人去过英孚(EF）培训的吗，效果如何？去培训机构还是上网课那个比较...</a>
+                                    								</p>
+								<span class="fr">140</span>
+							</div>
+							<div class="pro">
+								<span class="fr">0</span>
+								<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=space&amp;mod=Index&amp;act=view&amp;maskId=105467">
+									hmark																		&nbsp;</a>
+																于2016-06-05 11:24发表
+								在 <a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=List&amp;act=index&amp;class=461&amp;cate=239">[求助咨询]</a>								 最后回复 2016-06-05 11:24							</div>
+						</div>
+						<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=space&amp;mod=Index&amp;act=view&amp;maskId=105467">
+							                    	<img src="http://xinsheng.huawei.com/cn/public/img/user_pic.gif">	                    </a>
+					</li>					<li>
+						<div class="font_box">
+							<div class="title">
+								<p>
+<!-- 									<span class="class">
+									<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&mod=List&act=index&class=461&cate=239">[求助咨询]</a>									</span> -->
+                                    									<a title="谁知道16年深圳市规定的产假有多少天？" target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=Detail&amp;act=index&amp;id=2928491">谁知道16年深圳市规定的产假有多少天？</a>
+                                    								</p>
+								<span class="fr">356</span>
+							</div>
+							<div class="pro">
+								<span class="fr">3</span>
+								<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=space&amp;mod=Index&amp;act=view&amp;maskId=50314">
+									大兵小将																		&nbsp;</a>
+																于2016-05-19 18:44发表
+								在 <a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=List&amp;act=index&amp;class=461&amp;cate=239">[求助咨询]</a>								 最后回复 2016-06-05 11:23							</div>
+						</div>
+						<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=space&amp;mod=Index&amp;act=view&amp;maskId=50314">
+							                    	<img src="http://xinsheng-image.huawei.com/cn/forumimage/data/uploads/2015/0526/12/5563f5ea34108.gif">	                    </a>
+					</li>					<li class="odd">
+						<div class="font_box">
+							<div class="title">
+								<p>
+<!-- 									<span class="class">
+									<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&mod=List&act=index&class=461&cate=239">[求助咨询]</a>									</span> -->
+                                    									<a title="有哪位知道郑州哪个医院治疗肺癌比较好点吗？" target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=Detail&amp;act=index&amp;id=2949373">有哪位知道郑州哪个医院治疗肺癌比较好点吗？</a>
+                                    								</p>
+								<span class="fr">126</span>
+							</div>
+							<div class="pro">
+								<span class="fr">1</span>
+								<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=space&amp;mod=Index&amp;act=view&amp;maskId=9226">
+									西门吹雪																		&nbsp;</a>
+																于2016-06-05 10:00发表
+								在 <a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=List&amp;act=index&amp;class=461&amp;cate=239">[求助咨询]</a>								 最后回复 2016-06-05 11:15							</div>
+						</div>
+						<a target="_blank" href="http://xinsheng.huawei.com/cn/index.php?app=space&amp;mod=Index&amp;act=view&amp;maskId=9226">
+							                    	<img src="http://xinsheng.huawei.com/cn/public/img/user_pic.gif">	                    </a>
+					</li>				</ul>
+			
+
+			</div>
+ 
+				 
+                
+                
+                
+                
+			<!-- 分页 begin -->
+            <div class="bbs_page"><form method="get" action="" onsubmit="return turnToPage(this)"><ul> <li class="on"><a>1</a></li><li><a href="/cn/index.php?app=forum&amp;mod=List&amp;act=index&amp;class=461&amp;p=2">2</a></li><li><a href="/cn/index.php?app=forum&amp;mod=List&amp;act=index&amp;class=461&amp;p=3">3</a></li><li><a href="/cn/index.php?app=forum&amp;mod=List&amp;act=index&amp;class=461&amp;p=4">4</a></li><li><a href="/cn/index.php?app=forum&amp;mod=List&amp;act=index&amp;class=461&amp;p=3563">...3563</a></li><li><input type="text" value="1" id="changeToPage" class="changeToPage" data-url="">/3563 &nbsp;</li><li><a href="/cn/index.php?app=forum&amp;mod=List&amp;act=index&amp;class=461&amp;p=2">下一页&gt;</a></li>
+				<script>
+					function turnToPage(obj){
+						obj = $(obj);
+						var input = $(obj).find("input");
+						var i = input.val();
+						if(!i.match(/^\d+$/)) {
+							alert("请输入数字");
+							obj.focus();
+							return false;
+						}
+						
+						var url  = input.attr("data-url");
+						if($.trim(url) =="") url = window.location.href;
+						//todo url中带有#号时会对分页跳转造成影响，导致无法跳转
+						//not a param pattern
+						var nap = /#[\w]*/g;
+						//过滤掉url中的 #号
+						if( nap.test(url) ){
+							url = url.replace( nap,"");
+	    				}
+						var re = /\&p=[0-9]*/g;      
+						if( re.test(url) ){
+							url = url.replace( re,"&p="+i+"");
+						}else{
+							url += ("&p="+i+"");
+						}
+						
+						window.location.href = url;
+						return false;
+					}
+								
+				</script>
+			</ul></form> </div>               <!-- 分页 end -->
+            </div>
+        </div>
+        <!--  BBS左   End -->
+        <!--  BBS右  Star -->
+        <div class="bbs_right">
+            <!--  sidebar   Star -->
+            	
+                        
+			
+            <!--  sidebar   End -->
+            <script type="text/javascript">
+			//div展开收缩
+			function $FlexEle(element) {
+				return element = document.getElementById(element);
+			}
+			function $useFlex(targetid, objN) {
+				var FlexId = $FlexEle(targetid);
+				var objNValue = $FlexEle(objN);
+				if (FlexId.style.display == "none") {
+					FlexId.style.display = "block";
+		            objNValue.className = "icon_flex_up";
+				} else {
+					FlexId.style.display = "none";
+		            objNValue.className = "icon_flex_down";
+				}
+			}
+            </script>
+
+            <!--  版主   Star -->
+                        <div class="myGroup_admin" style="margin-top:5px;">
+				<div class="myGroup_admin_on">
+					<span id="stateBut2">值班版主：
+						<a target="_blank" title="丝竹空" class="icon_admin_on" href="http://xinsheng.huawei.com/cn/index.php?app=space&amp;mod=Wall&amp;act=index&amp;maskId=424621">丝竹空</a>					</span>
+				</div>
+			</div>
+            <!--  版主   End -->
+            <!--  列表页右侧小广告   Star -->
+            <div class="topAdvBox" id="topAdvBox47" style="width:220px; height:72px;">
+	    <div class="topAdv" id="ads47" style="width:220px; height:72px;">
+    	<div><a class="adv_link" href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=List&amp;act=index&amp;class=915" target="_blank" value="533"><img src="http://xinsheng-image.huawei.com/cn/forumimage/showimage-3630761-417ccdc4ad6ad84cf301dbfa2c4984c3-arr.jpg" width="220" height="72"></a></div>    </div>
+</div>
+<script>
+	$(function(){
+				var advCount47 = {
+				init:function(app, uid, uname, maskName, maskId, fid) 
+				{
+					this.app = typeof(app) == 'undefined' ? '' : app;
+					this.uid = typeof(uid) == 'undefined' ? '' : uid;
+					this.uname = typeof(uname) == 'undefined' ? '' : uname;
+					this.maskName = typeof(maskName) == 'undefined' ? '' : maskName;
+					this.maskId = typeof(maskId) == 'undefined' ? '' : maskId;
+					this.fid = typeof(fid) == 'undefined' ? '' : fid;
+					this.refer = "";
+				},
+				initAdvInfo:function(advLink, advImgLink) 
+				{
+					this.ext1 = 'adv';
+					this.ext2 = typeof(advLink) == 'undefined' ? '' : advLink;
+					this.ext3 = typeof(advImgLink) == 'undefined' ? '' : advImgLink;
+				},
+				initUrl:function() 
+				{
+					this.advCountUrl = SITE_URL + '/online_check_new.php?' + 
+						'action=trace' + 
+						'&source=web' + 
+						'&app=' + this.app + 
+						'&uid=' + this.uid +
+						'&uname=' + this.uname + 
+						'&maskName=' + this.maskName + 
+						'&maskId=' + this.maskId + 
+						'&ext1=' + this.ext1 + 
+						'&ext2=' + this.ext2 + 
+						'&ext3=' + this.ext3 + 
+						'&refer=' + this.refer + 
+						'&fid=' + this.fid;
+				},
+				doCount:function() 
+				{
+					this.initUrl();
+					$('#ads47').append("\<script type=\"text\/javascript\" src=\"" + this.advCountUrl + "\"\>\<\/script\>");
+				}
+			};
+			if (typeof(advCount47) != 'undefined') {
+				advCount47.init("forum/list/index", "", "", "", "", "461");	
+			}
+			$("#ads47 a.adv_link").click(function(){
+				var advLink = $(this).attr('value');//encodeURIComponent($(this).attr('href'));
+				var advImgLink = encodeURIComponent($('img', this).attr('src'));
+				advCount47.initAdvInfo(advLink, advImgLink);
+				advCount47.doCount();
+			});
+		
+});
+</script>
+            <!--  列表页右侧小广告   End -->
+            
+            <!--  热贴推荐   Star -->
+            		<div class="bbs_right_newslist">
+	<span>24小时新帖点击排行</span>
+	<ul>
+			<li><span class="on">1</span>				<a href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=Detail&amp;act=index&amp;id=2949141" target="_blank" title="好消息！好消息！全员有份，降薪2K">好消息！好消息！全员有份，降薪2K</a></li><li><span class="on">2</span>				<a href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=Detail&amp;act=index&amp;id=2949161" target="_blank" title="500万的新闻都出来了为啥行政之窗的水准还没改善些">500万的新闻都出来了为啥行政之窗的水准还没改善些</a></li><li><span class="on">3</span>				<a href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=Detail&amp;act=index&amp;id=2948993" target="_blank" title="前段时间炒华为离开深圳因为房价高，估计开发商怕政策打压，现在炒华为人买房不缺钱，离开深圳跟房价没关系是原生家庭问题。">前段时间炒华为离开深圳因为房价高，估计开发商怕政策打压，现在炒华为人买房不缺钱，离开深圳跟房价没关系是原生家庭问题。</a></li><li><span>4</span>				<a href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=Detail&amp;act=index&amp;id=2948983" target="_blank" title="新人小白，请大仙指教！15年绩效打C，意味着什么？16年奖金有影响吗？">新人小白，请大仙指教！15年绩效打C，意味着什么？16年奖金有影响吗？</a></li><li><span>5</span>				<a href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=Detail&amp;act=index&amp;id=2949177" target="_blank" title="早上到的很早算加班吗？">早上到的很早算加班吗？</a></li><li><span>6</span>				<a href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=Detail&amp;act=index&amp;id=2948951" target="_blank" title="捡了个破木头箱子">捡了个破木头箱子</a></li><li><span>7</span>				<a href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=Detail&amp;act=index&amp;id=2949445" target="_blank" title="500w让整个论坛都酸了">500w让整个论坛都酸了</a></li><li><span>8</span>				<a href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=Detail&amp;act=index&amp;id=2949029" target="_blank" title="请大家说说是回湖北上学呢？还是留在帝都上个普通的小学？">请大家说说是回湖北上学呢？还是留在帝都上个普通的小学？</a></li><li><span>9</span>				<a href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=Detail&amp;act=index&amp;id=2949251" target="_blank" title="华为“迷茫论”核心是危机意识">华为“迷茫论”核心是危机意识</a></li><li><span>10</span>				<a href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=Detail&amp;act=index&amp;id=2949289" target="_blank" title="咨询一个信用卡黑名单的事情，我有错我认，有招支招，没招可重拍">咨询一个信用卡黑名单的事情，我有错我认，有招支招，没招可重拍</a></li>		</ul>	
+	
+</div>            <!--  热贴推荐   End -->
+
+            <!--  热贴推荐   Star -->
+            		<div class="bbs_right_newslist">
+	<span>24小时回复量排行</span>
+	<ul>
+			<li><span class="on">1</span>				<a href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=Detail&amp;act=index&amp;id=2942489" target="_blank" title="感恩回馈 #你许愿 我送礼#  华为女神邀你一起交换梦想！">感恩回馈 #你许愿 我送礼#  华为女神邀你一起交换梦想！</a></li><li><span class="on">2</span>				<a href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=Detail&amp;act=index&amp;id=2948951" target="_blank" title="捡了个破木头箱子">捡了个破木头箱子</a></li><li><span class="on">3</span>				<a href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=Detail&amp;act=index&amp;id=2948717" target="_blank" title="华为工资单曝光：千人年收入500万 万人年薪百万">华为工资单曝光：千人年收入500万 万人年薪百万</a></li><li><span>4</span>				<a href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=Detail&amp;act=index&amp;id=2949177" target="_blank" title="早上到的很早算加班吗？">早上到的很早算加班吗？</a></li><li><span>5</span>				<a href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=Detail&amp;act=index&amp;id=2948579" target="_blank" title="昨天车停F4地库被蹭了，希望对方看到了联系本人。">昨天车停F4地库被蹭了，希望对方看到了联系本人。</a></li><li><span>6</span>				<a href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=Detail&amp;act=index&amp;id=2948803" target="_blank" title="老婆要跟我离婚怎么办？？？？？">老婆要跟我离婚怎么办？？？？？</a></li><li><span>7</span>				<a href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=Detail&amp;act=index&amp;id=2949305" target="_blank" title="嘿！我已长发及腰*ω*">嘿！我已长发及腰*ω*</a></li><li><span>8</span>				<a href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=Detail&amp;act=index&amp;id=2947093" target="_blank" title="我只想知道，我为什么就剩下了？">我只想知道，我为什么就剩下了？</a></li><li><span>9</span>				<a href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=Detail&amp;act=index&amp;id=2948787" target="_blank" title="又一次被新闻又震惊了">又一次被新闻又震惊了</a></li><li><span>10</span>				<a href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=Detail&amp;act=index&amp;id=2948055" target="_blank" title="够牛你就来！">够牛你就来！</a></li>		</ul>	
+	
+</div>            	<!--</if> -->
+            <!--  热贴推荐   End -->
+                        
+            <!--  猜你喜欢   Star -->
+            	<!-- -->
+            		<div class="bbs_right_newslist">
+	<span>猜你喜欢</span>
+	<ul>
+			<li><span class="dot">·</span>				<a href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=Detail&amp;act=index&amp;id=1554041" target="_blank" title="分享40个全球免费开放的电子图书馆">分享40个全球免费开放的电子图书馆</a></li><li><span class="dot">·</span>				<a href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=Detail&amp;act=index&amp;id=2110091" target="_blank" title="人才市场亲历">人才市场亲历</a></li><li><span class="dot">·</span>				<a href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=Detail&amp;act=index&amp;id=2084011" target="_blank" title="得了癌症，天堂向左，医院向右">得了癌症，天堂向左，医院向右</a></li><li><span class="dot">·</span>				<a href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=Detail&amp;act=index&amp;id=759305" target="_blank" title="【movie】整理了一些电影资料，自己留着慢慢看。">【movie】整理了一些电影资料，自己留着慢慢看。</a></li><li><span class="dot">·</span>				<a href="http://xinsheng.huawei.com/cn/index.php?app=forum&amp;mod=Detail&amp;act=index&amp;id=1079857" target="_blank" title="爆料淘宝网购的真相，揭秘淘宝那些万里挑一的精品店铺!! 瞬间变身潮人！">爆料淘宝网购的真相，揭秘淘宝那些万里挑一的精品店铺!! 瞬间变身潮人！</a></li>		</ul>	
+	
+</div>            	<!-- -->
+            <!--  热贴推荐   End -->
+            
+            <!--  热门圈子   Star -->
+           <!--  <div class="bbs_hotgroup"> -->
+				<div class="bbs_hotgroup">
+	<span><a href="http://xinsheng.huawei.com/cn/index.php?app=group&amp;mod=index&amp;act=pickGroups" target="_blank" class="bluelink fr">圈子广场</a>热门圈子</span>
+
+	<ul>
+		<li id="bbs_hotgroup1">
+				<a href="http://xinsheng.huawei.com/cn/index.php?app=group&amp;mod=index&amp;act=plug&amp;gid=67" target="_blank" title="亲子协会">
+				<img width="55" height="55" src="http://xinsheng-image.huawei.com/cn/forumimage/showimage-707255-c456fbb8bbab35cadeb7f1bf8b46b501-cut100X100.jpg">
+				</a><p><a href="http://xinsheng.huawei.com/cn/index.php?app=group&amp;mod=index&amp;act=plug&amp;gid=67" target="_blank" title="亲子协会">
+					</a><a href="http://xinsheng.huawei.com/cn/index.php?app=group&amp;mod=index&amp;act=plug&amp;gid=67" target="_blank" title="亲子协会">亲子协会</a></p>
+				
+				<p>成员：3043</p>
+				<p>话题：316</p> 
+				
+							</li><li id="bbs_hotgroup1">
+				<a href="http://xinsheng.huawei.com/cn/index.php?app=group&amp;mod=index&amp;act=plug&amp;gid=4193" target="_blank" title="年代秀故事">
+				<img width="55" height="55" src="http://xinsheng-image.huawei.com/cn/forumimage/showimage-2894713-a381f8cdf336b82c83fe5ed834bcc43f-cut100X100.jpg">
+				</a><p><a href="http://xinsheng.huawei.com/cn/index.php?app=group&amp;mod=index&amp;act=plug&amp;gid=4193" target="_blank" title="年代秀故事">
+					</a><a href="http://xinsheng.huawei.com/cn/index.php?app=group&amp;mod=index&amp;act=plug&amp;gid=4193" target="_blank" title="年代秀故事">年代秀故事</a></p>
+				
+				<p>成员：63</p>
+				<p>话题：21</p> 
+				
+							</li><li id="bbs_hotgroup1">
+				<a href="http://xinsheng.huawei.com/cn/index.php?app=group&amp;mod=index&amp;act=plug&amp;gid=829" target="_blank" title="我是一只鱼">
+				<img width="55" height="55" src="http://xinsheng-image.huawei.com/cn/forumimage/showimage-827253-75bfaf1aba6a3e8c969ea326f2f65e3a-cut100X100.jpg">
+				</a><p><a href="http://xinsheng.huawei.com/cn/index.php?app=group&amp;mod=index&amp;act=plug&amp;gid=829" target="_blank" title="我是一只鱼">
+					</a><a href="http://xinsheng.huawei.com/cn/index.php?app=group&amp;mod=index&amp;act=plug&amp;gid=829" target="_blank" title="我是一只鱼">我是一只鱼</a></p>
+				
+				<p>成员：210</p>
+				<p>话题：19</p> 
+				
+							</li>	</ul>
+	<input type="hidden" id="widg_myMaskId" value="0">
+</div>
+<script>
+var myWidget = {};
+myWidget.JoinGroup = function(){
+	var joinUrl = U('group/Do/ajax');
+	var forJoins = $('.widgetJoinGroup');
+	var G_maskId = $('#widg_myMaskId').val();
+	forJoins.die('click').live('click',function(){
+		var _this = $(this);
+		var gid = $(this).attr('data-id');
+		var url = $(this).attr('data-url');
+		var type = $(this).attr('data-type');
+		if(G_maskId =='' || G_maskId <=0){
+			$.tbox.no("系统没有检测到您当前使用的昵称,<br/>请先到个人空间进行昵称设置或启用再来加入圈子","提示");
+			setTimeout("$.tbox.close()",3000);
+			return false;}
+		var sendData = {action:'joingroup',gid:gid,isJoin:1};
+		var loadImg = '<img src="'+_ROOT_ +'/public/libs/tbox/bigloading.gif" height="22" width="22" />';
+		_this.html(loadImg);
+		$.post(joinUrl,sendData,function(msg){
+			if(msg.status=="-1"){
+				$.tbox.no(msg.info,"提示");
+				_this.remove();
+			}else if(msg.status=="1"){
+				$.tbox.yes(msg.info,"提示");
+				_this.after('<div class="btn_gray">已加入</div>').remove();
+			}else if(msg.status=='0'){
+				$.tbox.yes(msg.info,"提示");
+				_this.after('<div class="btn_gray">待审核</div>').remove();
+			}else{
+				$.tbox.no(msg.info,"提示");
+				_this.remove();
+			}
+			setTimeout("$.tbox.close()",3000);
+		},'json');						   
+	});
+};
+$(function($) {
+	myWidget.JoinGroup();
+});	
+</script>            <!-- </div> -->
+            <!--  热门圈子   End -->
+            
+            <!--  精彩博文   Star -->
+						<div class="bbs_hotblog">
+			<span class="title">精彩博文</span>
+			<!-- 一张图片 -->
+							<a class="img" target="_blank" href="http://xinsheng.huawei.com/cn/blog/detail_75843.html">
+					<img src="http://xinsheng-image.huawei.com/cn/forumimage/showimage-3676457-e5a7668766d24d74003614efe5856a07_c1424c71edc3372a707da672f0d99a20-cut282X160.jpg">
+				</a>
+				<div class="tra"></div>
+							    <div class="train"><a target="_blank" href="http://xinsheng.huawei.com/cn/blog/detail_75843.html" title="凤凰花开">凤凰花开</a></div>
+					</div>
+	            <!--  精彩博文   End -->
+            <!--  版块规则   Star -->
+            <div class="Flex">
+                <span id="stateBut1" class="icon_flex_up" onclick="$useFlex('Flexcontent','stateBut1')">版块规则</span>
+                <p id="Flexcontent">“华为家事”的定位是“交流、咨询、解惑”。在这里，您可以了解公司政策及其解读；倾述工作中遇到的困惑、寻求帮助，也可以分享您在工作中的真实感悟、快乐与故事。欢迎大家在相互尊重理解的气氛下交流，遵守《心声社区管理规定》，畅谈你的我的华为事。</p>
+            </div>
+            <!--  版块规则   End -->            
+            <!--  首页广告四 Star  -->
+                        <!--  首页广告四 End  -->                     
+        </div>
+        <!--  BBS右   End -->
+    <div class="clear"></div>
+    </div>
+<script>
+
+	$(function(){
+		var obj = $('.select_divs').find('.form_select');
+		obj.css({'min-width':'25px','width':'25px','height':'26px'});
+		obj.find('.selected').attr('style',"overflow:initial;line-height:26px;");
+		obj.find('.carat').css({'height':'26px'});
+		obj.find('ul').css({'width':'65px'});
+	})
+
+	var fid = "461";
+				 
+	var tp ;
+	var su ;
+	
+	function checkMask(type,sure){
+		 tp = type;
+		 su = sure;
+		var maskCount = 0;
+		var nameState = "";
+		var isTrueNameBoard	=	"0";
+
+		if( maskCount == 0 && nameState == 0 && isTrueNameBoard==0 ){
+			$.tbox.confirm_1("您还没有昵称，是否去添加一个新的昵称？","提示",{ok:"setMask()",no:"goPost()"});
+		}else{
+			if(tp=="topic"&&su=="y"){
+				window.open("http://xinsheng.huawei.com/cn/index.php?app=forum&mod=Index&act=post&class=461&cate=0");
+			}else if(tp=="topic"&&su=="n"){
+				window.open("http://xinsheng.huawei.com/cn/index.php?app=forum&mod=Index&act=post&class=461");
+			}else if(tp=="vote"&& su=="y"){
+				window.open("http://xinsheng.huawei.com/cn/index.php?app=forum&mod=Index&act=special&class=461&special=2&cate=0");
+			}else if(tp=="vote"&& su=="n"){
+				window.open("http://xinsheng.huawei.com/cn/index.php?app=forum&mod=Index&act=special&class=461&special=2");
+			}else if(tp=="question"&& su=="y"){
+				window.open("http://xinsheng.huawei.com/cn/index.php?app=forum&mod=Index&act=special&class=461&special=15&cate=0");
+			}else if(tp=="question"&& su=="n"){
+				window.open("http://xinsheng.huawei.com/cn/index.php?app=forum&mod=Index&act=special&class=461&special=15");
+			}else if(tp=="notice"){
+				window.open("http://xinsheng.huawei.com/cn/index.php?app=forum&mod=Index&act=special&class=461&special=1");
+			}
+		}
+	}
+	
+	function setMask(){
+		window.location.href = "http://xinsheng.huawei.com/cn/index.php?app=space&mod=Info&act=baseinfo";
+		}
+	function goPost(){
+		if(tp=="topic"&&su=="y"){
+			window.open("http://xinsheng.huawei.com/cn/index.php?app=forum&mod=Index&act=post&class=461&cate=0");
+		}else if(tp=="topic"&&su=="n"){
+			window.open("http://xinsheng.huawei.com/cn/index.php?app=forum&mod=Index&act=post&class=461");
+		}else if(tp=="vote"&& su=="y"){
+			window.open("http://xinsheng.huawei.com/cn/index.php?app=forum&mod=Index&act=special&class=461&special=2&cate=0");
+		}else if(tp=="vote"&& su=="n"){
+			window.open("http://xinsheng.huawei.com/cn/index.php?app=forum&mod=Index&act=special&class=461&special=2");
+		}else if(tp=="question"&& su=="y"){
+			window.open("http://xinsheng.huawei.com/cn/index.php?app=forum&mod=Index&act=special&class=461&special=15&cate=0");
+		}else if(tp=="question"&& su=="n"){
+			window.open("http://xinsheng.huawei.com/cn/index.php?app=forum&mod=Index&act=special&class=461&special=15");
+		}else if(tp=="notice"){
+			window.open("http://xinsheng.huawei.com/cn/index.php?app=forum&mod=Index&act=special&class=461&special=1");
+		}
+	}
+</script>
+<script>
+	$("#list_order").change(function(){
+		var url = $(this).val();
+		if( url ){
+			window.location.href = url;
+		}
+	})
+    function addUserSetting(){
+        //var listNum = $('#topic_num').val();
+        var listNum = $('.form_select').find('.selected').text();
+        listNum = parseInt(listNum);
+        $.post("http://xinsheng.huawei.com/cn/index.php?app=space&mod=Info&act=userSetting",{listNum:listNum},function(txt){
+            txt = eval("("+txt+")");
+            if(txt){
+               window.location.reload();
+            }
+        });
+    }
+</script>
+<div class="footer">
+	<div class="footer-menu">
+		<div class="footer-logo">
+			<a href="#"><img src="/cn/public/img/logo_2016.png" height="26"></a>
+		</div>
+				<ul class="footer-ul-menu">
+			<li><span class="ichome i-about"></span><a href="http://xinsheng.huawei.com/cn/help/index.html#about" target="_blank">关于我们</a><span class="line">|</span></li>
+			<li><span class="ichome i-tel"></span><a href="http://xinsheng.huawei.com/cn/help/index.html#contact" target="_blank">联系我们</a><span class="line">|</span></li>
+			<li><span class="ichome i-help"></span><a href="http://xinsheng.huawei.com/cn/help/index.html#forum" target="_blank">帮助</a><span class="line">|</span></li>
+			<li><span class="ichome i-manage-h"></span><a href="http://xinsheng.huawei.com/cn/help/index.html#manage" target="_blank">心声社区管理规定</a></li>
+		</ul>
+		
+		<p class="footer-link">友情链接：
+			<a href="http://www.huawei.com" target="_blank" style="font-size:12px" title="华为官网">·&nbsp;华为官网</a>
+			<a href="http://w3.huawei.com" target="_blank" style="font-size:12px" title="W3">·&nbsp;W3</a>
+			<a href="http://3ms.huawei.com" target="_blank" style="font-size:12px" title="3ms">·&nbsp;3ms</a>
+		</p>
+	</div>
+	
+		<div class="footer-copy">
+		<p>版权所有©华为技术有限公司 1998-2016。 保留一切权利。粤A2-20044005号</p>
+	</div>
+</div>
+
+<script type="text/javascript" src="http://xinsheng.huawei.com/cn/public/js/popModal.js?v=20160602"></script>
+<div class="bottom_tools" style="height: 100px; bottom: 10px; position: fixed; margin-left: 505px; left: 50%; right: 40px; top: auto;">
+    <a id="faq" href="/cn/help/faq.html " target="_blank"></a>
+    <!--<a id="Support" href="" title="在线支持">在线支持</a>-->
+    <a class="scrollUp" id="scrollUp"></a>
+</div>
+<!-- 
+<ul id="scancode" style="display:none">
+	<li><span>心声APP</span>
+	<ul>
+		<li><img src="http://xinsheng.huawei.com/cn/public/img/pic44.png"><br>
+		<a href="http://xinsheng.huawei.com/cn/index.php?app=mobile&mod=Public&act=download"  target="_blank">点击或扫描下载</a></li>
+	</ul>
+	</li>
+		<li><span>心声微信</a></span>
+	<ul>
+		<li><img src="http://xinsheng.huawei.com/cn/public/img/pic45.png"><br>
+		<a href="#">扫描并加关注</a></li>
+	</ul>
+	</li>
+	<li><a href="javascript:void(0)" onClick="closeLable('scancode','appdownload')">关闭</a></li>
+</ul>
+ -->
+<script type="text/javascript" src="http://xinsheng-image.huawei.com/cn/forumimage/online_check_new.php?&amp;action=trace&amp;app=forum/List/index&amp;uid=-1&amp;uname=&amp;maskName=&amp;maskId=&amp;ext1=forum&amp;ext2=461&amp;ext3=0&amp;refer=&amp;fid=461&amp;source=web"></script>    
+<script>
+    var hwaParams = {"dimension1":"\u8bba\u575b","dimension2":"\u534e\u4e3a\u5bb6\u4e8b","dimension3":"","metric2":461,"dimension4":"\u5168\u90e8\u4e3b\u9898","metric4":0};
+    var hwaSetAutoSendPV = true;
+    (function (url,win,doc,myName) {
+        win[myName] = win[myName] || function(){
+            (win[myName].q = win[myName].q || []).push(arguments);
+        };
+        setTimeout(function () {
+            var iframe = document.createElement('iframe');
+            (iframe.frameElement || iframe).style.cssText = 'display:none';
+            iframe.src = 'javascript:false';
+            var where = document.getElementsByTagName('script')[0];
+            where.parentNode.insertBefore(iframe, where);
+            var doc = iframe.contentWindow.document;
+            doc.open().write('<body onload="' +
+                    'var js = document.createElement(\'script\');' +
+                    'js.src = \'' + url + '?hr=' + new Date().getTime() + '\';' +
+                    'document.body.appendChild(js);">');
+            doc.close();
+        }, 0);
+    }('http://app.huawei.com/hwa-c/configresource/js/general/ha_f.js',window, document,'ha'));
+    ha("setSiteId","xs");
+    ha("set","language","cn_zh");
+    ha("set","appn","PC");
+    ha("set","appv","1.1");
+        ha("set","uid","-1");
+    ha("set",hwaParams);
+    ha("setAutoSendPV",hwaSetAutoSendPV);
+
+    $(document).delegate('.topAdv a','click',function(){
+        var val = $(this).attr("value");
+        var id = $(this).parents(".topAdv").attr('id').substr(3);
+        var jsondata = {positionId:id,relationId:val};
+        var postUrl = "http://xinsheng.huawei.com/cn/index.php?app=index&mod=index&act=hwa_adv";
+        $.ajax({
+            type:"POST",
+            url:postUrl,
+            data:jsondata,
+            success:function(rs){
+                var data=eval('('+rs+')');
+                resetHwaParams();
+                hwaParams = {dimension1:"广告",dimension2:data['positionName'],dimension3:data['advName'],metric2:id,metric3:data['advId']};
+                ha("trackEvent","click",hwaParams);
+                ha("trackPageView",hwaParams);
+            }
+        });
+    });
+
+    function resetHwaParams(){
+        for(var i in hwaParams ){
+            hwaParams[i] = "";
+            ha("set",i,"");
+        }
+    }
+                </script>
+    <div class="tbox_tb_header" style="height:0;position: absolute;left:9999px;"></div>
+
+<div id="lightbox-overlay" style="opacity: 0.6; position: absolute; overflow: hidden; display: none; top: 0px; left: 0px; z-index: 1000; background-color: rgb(0, 0, 0);"></div></body></html>

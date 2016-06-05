@@ -8,7 +8,15 @@
 import scrapy
 
 
-class CrawlerItem(scrapy.Item):
+class TopicItem(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
-    pass
+    title=scrapy.Field()
+    author=scrapy.Field()
+    date=scrapy.Field()
+    reads=scrapy.Field()
+    forum=scrapy.Field()
+
+class Member:
+	name=scrapy.Field()
+	link=scrapy.Field()
