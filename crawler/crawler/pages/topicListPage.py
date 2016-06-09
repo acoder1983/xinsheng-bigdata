@@ -1,9 +1,12 @@
 # -*- coding:utf-8 -*-
 
 class TopicListPage(object):
-	def getTopicUrls():
-		pass
+	def __init__(self, responseBody):
+		body=responseBody
 
-	def getNextPageUrl():
+	def getTopicUrls(self):
+		return []
+
+	def getNextPageUrl(self):
 		pass
 		
