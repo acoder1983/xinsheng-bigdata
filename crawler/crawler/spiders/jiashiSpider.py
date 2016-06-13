@@ -5,6 +5,8 @@ from scrapy.contrib.spiders import CrawlSpider, Rule
 from scrapy.selector import Selector
 from scrapy.contrib.linkextractors.sgml import SgmlLinkExtractor
 from scrapy.http import Request, FormRequest
+sys.path.insert(0, '..')
+from items import Topic
 
 
 class JiashiSpider(scrapy.Spider):
@@ -63,9 +65,24 @@ class JiashiSpider(scrapy.Spider):
         for url in topicUrls:
             yield scrapy.Request(url, callback=parse_topic)
         nextPageUrl = page.getNextPageUrl()
-        yield scrapy.Request(nextPageUrl, callback=parse)
+        if nextPageUrl:
+            yield scrapy.Request(nextPageUrl, callback=parse)
+
+    curTopic
 
     def parse_topic(self, response):
-        page=new TopicPage(response.body)
-        page.
-        
+        page = new TopicPage(response.body)
+        curTopic = page.getTopic()
+        nextPageUrl = page.getNextPageUrl()
+        if nextPageUrl:
+            yield scrapy.Request(nextPageUrl, callback=parse_reply)
+        return curTopic
+
+    def parse_reply(self, response):
+        page = new TopicPage(response.body)
+        Topic topic = page.getTopic()
+        curTopic.replies.append(topic.replies)
+        nextPageUrl = page.getNextPageUrl()
+        if nextPageUrl:
+            yield scrapy.Request(nextPageUrl, callback=parse_reply)
+        return curTopic
