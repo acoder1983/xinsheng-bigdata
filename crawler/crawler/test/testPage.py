@@ -4,6 +4,8 @@ import sys
 sys.path.insert(0, '../pages')
 from topicListPage import TopicListPage
 from topicPage import TopicPage
+sys.path.insert(0, '..')
+from items import Topic
 
 
 class TestTopicListPage(unittest.TestCase):
@@ -29,6 +31,10 @@ class TestTopicPage(unittest.TestCase):
         f = open('data/topic1-1.html')
         self.body = f.read()
 
-    def testGetTitle(self):
+    def testGetTopic(self):
         page = TopicPage(self.body)
-        self.assertEqual("【枪林弹雨中成长】系列故事汇总贴，最新上映：《沸腾的战场》", page.getTitle())
+        topic = page.getTopic()
+
+        self.assertEqual("【枪林弹雨中成长】系列故事汇总贴，最新上映：《沸腾的战场》", topic['title'])
+
+        self.assertEqual("华为家事", topic['author']['name'])
