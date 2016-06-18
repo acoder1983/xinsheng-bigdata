@@ -6,7 +6,10 @@ from scrapy.selector import Selector
 from scrapy.contrib.linkextractors.sgml import SgmlLinkExtractor
 from scrapy.http import Request, FormRequest
 sys.path.insert(0, '..')
+sys.path.insert(0, '../pages')
 from items import Topic
+from topicListPage import TopicListPage
+from topicPage import TopicPage, ReplyPage
 
 
 class JiashiSpider(scrapy.Spider):
@@ -63,26 +66,32 @@ class JiashiSpider(scrapy.Spider):
         page = new TopicListPage(response.body)
         topicUrls = page.getTopicUrls()
         for url in topicUrls:
-            yield scrapy.Request(url, callback=parse_topic)
+            req = scrapy.Request(url, callback=parse_topic)
+            req.meta['url'] = url
+            yield req
         nextPageUrl = page.getNextPageUrl()
         if nextPageUrl:
             yield scrapy.Request(nextPageUrl, callback=parse)
 
-    curTopic
-
     def parse_topic(self, response):
         page = new TopicPage(response.body)
         curTopic = page.getTopic()
+        curTopic['url'] = response.meta['url']
         nextPageUrl = page.getNextPageUrl()
         if nextPageUrl:
-            yield scrapy.Request(nextPageUrl, callback=parse_reply)
+            req = scrapy.Request(nextPageUrl, callback=parse_reply)
+            req.meta['topic'] = curTopic
+            yield req
         return curTopic
 
     def parse_reply(self, response):
-        page = new TopicPage(response.body)
-        Topic topic = page.getTopic()
-        curTopic.replies.append(topic.replies)
+        page = new ReplyPage(response.body)
+        replies = page.getReplies()
+        curTopic = response.meta['topic']
+        curTopic.replies.append(replies)
         nextPageUrl = page.getNextPageUrl()
         if nextPageUrl:
-            yield scrapy.Request(nextPageUrl, callback=parse_reply)
+            req = scrapy.Request(nextPageUrl, callback=parse_reply)
+            req.meta['topic'] = curTopic
+            yield req
         return curTopic
