@@ -8,21 +8,31 @@
 import scrapy
 
 
-class Topic(scrapy.Item):
-    title = scrapy.Field()
-    author = scrapy.Field()
-    date = scrapy.Field()
-    content = scrapy.Field()
-    reads = scrapy.Field()
-    forum = scrapy.Field()
-    replies = scrapy.Field()
-
-
 class Member(scrapy.Item):
     name = scrapy.Field()
-    link = scrapy.Field()
+    url = scrapy.Field()
 
 
 class Reply(scrapy.Item):
     author = scrapy.Field()
+    time = scrapy.Field()
     content = scrapy.Field()
+
+    def __init__(self):
+        scrapy.Item.__init__(self)
+        self['author'] = Member()
+
+
+class Topic(scrapy.Item):
+    url = scrapy.Field()
+    title = scrapy.Field()
+    author = scrapy.Field()
+    time = scrapy.Field()
+    content = scrapy.Field()
+    reads = scrapy.Field()
+    replies = scrapy.Field()
+
+    def __init__(self):
+        scrapy.Item.__init__(self)
+        self['author'] = Member()
+        self['replies'] = []
